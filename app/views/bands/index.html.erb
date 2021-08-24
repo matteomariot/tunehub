@@ -2,6 +2,6 @@
 
 <ul>
 <% @user_bands.each do |user_band| %>
-<li><%= @bands.find(user_band) %></li>
+<li><%= @bands.find(user_band.id).name %></li>
 <% end %>
 </ul>
