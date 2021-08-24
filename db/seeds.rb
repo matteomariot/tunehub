@@ -11,13 +11,13 @@ user1 = User.create!({ nickname: "Matteo", email: "matteo@gmail.com", password: 
 user2 = User.create!({ nickname: "Robin", email: "robin@gmail.com", password: "azerty" })
 user3 = User.create!({ nickname: "Mohammed", email: "mohammed@gmail.com", password: "azerty" })
 
+puts "Creating a band..."
+band = Band.create!({ name: "U2", user: user1 })
+
 puts "Creating members..."
 member1 = Member.create!({ user: user1, band: band })
 member2 = Member.create!({ user: user2, band: band })
 member3 = Member.create!({ user: user3, band: band })
-
-puts "Creating a band..."
-band = Band.create!({ name: "U2", user: user1 })
 
 puts "Creating a song..."
 song = Song.create!({ name: "The fly", description: "The Fly’s hip-hop drum beat only adds to the song’s insanity, making it impossible not to want to dance to this bonkers track, rocking along to the intimidating guitar.", band: band })
