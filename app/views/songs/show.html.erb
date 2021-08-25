@@ -1,3 +1,6 @@
 <h1>Songs#show</h1>
-<%= link_to 'PARTITION LIST -> PROJECT SHOW', "/songs/:song_id/partitions/:id" %>
-<p>Find me in app/views/songs/show.html.erb</p>
+<% @partitions.each do |partition| %>
+  <ul>
+  <li><%= partition.title %><%= link_to 'SEE PARTITION', "/songs/#{partition.song_id}/partitions/#{partition.id}" %></li>
+  </ul>
+<% end %>

@@ -5,6 +5,7 @@ class BandsController < ApplicationController
   end
 
   def show
+    @songs = Song.where(band_id: Member.where(user_id: current_user))
   end
 
   def new
