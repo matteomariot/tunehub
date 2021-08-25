@@ -1,5 +1,6 @@
 class PartitionsController < ApplicationController
   def show
+    @partition = Partition.find(params[:id])
   end
 
   def new
