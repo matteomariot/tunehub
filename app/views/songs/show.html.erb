@@ -1,6 +1,6 @@
 <h1>Songs#show</h1>
 <% @partitions.each do |partition| %>
   <ul>
-  <li><%= partition.title %><%= link_to 'SEE PARTITION', "/songs/#{partition.song_id}/partitions/#{partition.id}" %></li>
+  <li><%= partition.title %><%= link_to 'SEE PARTITION', song_partition_path(partition.song_id, partition.id) %></li>
   </ul>
 <% end %>
