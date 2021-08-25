@@ -25,7 +25,7 @@ song = Song.create!({ name: "The fly", description: "The Fly’s hip-hop drum be
 puts "Creating partitions..."
 partition1 = Partition.create!({ title: "Matteo's partition", instrument: "Drums", song: song, member: member1 })
 partition2 = Partition.create!({ title: "Robin's partition", instrument: "Guitar", song: song, member: member2 })
-partition3 = Partition.create!({ title: "Matteo's partition", instrument: "Piano", song: song, member: member3 })
+partition3 = Partition.create!({ title: "Mohammed's partition", instrument: "Piano", song: song, member: member3 })
 
 puts "Creating comments..."
 Comment.create!({ content: "Good job", time: Time.now, member: member1, partition: partition2 })
