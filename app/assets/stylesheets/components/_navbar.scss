@@ -1,12 +1,32 @@
-.navbar-lewagon {
-  justify-content: space-between;
-  background: white;
-}
-
-.navbar-lewagon .navbar-collapse {
+.navbar-collapse {
   flex-grow: 0;
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+.navbar-brand {
+  font-family: $homepage-font;
+  color: $white!important;
+  font-size: 28px;
+  margin-left: 15px;
+}
+
+.navbar-home {
+  background: transparent;
+  z-index: 1000;
+}
+
+.sign-up {
+  color: #DEDEDE!important;
+  font-weight: 500;
+  font-size: 20px;
+  margin-right: 20px;
+}
+
+.login {
+  color: #C4C4C4!important;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.navbar-pages {
+  background: $dark-blue;
 }
