@@ -9,7 +9,7 @@ class Song < ApplicationRecord
   validates :description,
   length: {
     minimum: 15,
-    maximum: 150,
+    maximum: 250,
     too_short: "The description must have at least 15 characters.",
     too_long: "The description must have no more than 150 characters."
   }
