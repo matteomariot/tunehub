@@ -1,0 +1,9 @@
+<nav id="sidebar">
+  <p>Bands</p>
+  <hr class="solid">
+  <ul>
+    <% user_bands.each do |user_band| %>
+      <li id="bands"><%= link_to "#{user_band.band.name}", band_path(:id) %></li>
+    <% end %>
+  </ul>
+</nav>
