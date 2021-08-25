@@ -2,6 +2,6 @@
 
 <ul>
 <% @user_bands.each do |user_band| %>
-<li><%= user_band.band.name %><%= link_to "SEE BAND", "/bands/#{user_band.band.id}" %></li>
+<li><%= user_band.band.name %><%= link_to "SEE BAND", band_path(user_band.id) %></li>
 <% end %>
 </ul>
