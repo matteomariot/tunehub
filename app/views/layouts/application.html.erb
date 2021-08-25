@@ -15,9 +15,11 @@
   <body>
     <% if current_page?(root_path) %>
       <%= render 'shared/navbar-home' %>
-    <% else %>
+    <% elsif !current_user.nil? %>
       <%= render 'shared/navbar' %>
       <%= render 'shared/sidebar', user_bands: @user_bands %>
+    <% else %>
+      <%= render 'shared/navbar' %>
     <% end %>
     <%= render 'shared/flashes' %>
     <%= yield %>
