@@ -11,25 +11,43 @@ user1 = User.create!({ nickname: "Matteo", email: "matteo@gmail.com", password: 
 user2 = User.create!({ nickname: "Robin", email: "robin@gmail.com", password: "azerty" })
 user3 = User.create!({ nickname: "Mohammed", email: "mohammed@gmail.com", password: "azerty" })
 
-puts "Creating a band..."
-band = Band.create!({ name: "U2", user: user1 })
+puts "Creating bands..."
+band1 = Band.create!({ name: "U2", user: user1 })
+band2 = Band.create!({ name: "Scorpions", user: user2 })
 
 puts "Creating members..."
-member1 = Member.create!({ user: user1, band: band })
-member2 = Member.create!({ user: user2, band: band })
-member3 = Member.create!({ user: user3, band: band })
+member1 = Member.create!({ user: user1, band: band1 })
+member2 = Member.create!({ user: user2, band: band1 })
+member3 = Member.create!({ user: user3, band: band1 })
+member4 = Member.create!({ user: user1, band: band2 })
+member5 = Member.create!({ user: user2, band: band2 })
+member6 = Member.create!({ user: user3, band: band2 })
 
-puts "Creating a song..."
-song = Song.create!({ name: "The fly", description: "The Fly’s hip-hop drum beat only adds to the song’s insanity, making it impossible not to want to dance to this bonkers track, rocking along to the intimidating guitar.", band: band })
+puts "Creating songs..."
+song1 = Song.create!({ name: "The fly", description: "The Fly’s hip-hop drum beat only adds to the song’s insanity, making it impossible not to want to dance to this bonkers track, rocking along to the intimidating guitar.", band: band1 })
+song2 = Song.create!({ name: "We Are The People", description: "In the making for three years, Dutch DJ and producer Garrix believed from the early stages of the creative process that Bono's vocals would be the perfect fit for 'We Are the People'.", band: band1 })
+song3 = Song.create!({ name: "Rock You Like a Hurricane!", description: "Rock You Like a Hurricane! is a song by German rock band Scorpions, considered as their signature song.", band: band2 })
 
 puts "Creating partitions..."
-partition1 = Partition.create!({ title: "Matteo's partition", instrument: "Drums", song: song, member: member1 })
-partition2 = Partition.create!({ title: "Robin's partition", instrument: "Guitar", song: song, member: member2 })
-partition3 = Partition.create!({ title: "Mohammed's partition", instrument: "Piano", song: song, member: member3 })
+partition1 = Partition.create!({ title: "Matteo's partition", instrument: "Drums", song: song1, member: member1 })
+partition2 = Partition.create!({ title: "Robin's partition", instrument: "Guitar", song: song1, member: member2 })
+partition3 = Partition.create!({ title: "Mohammed's partition", instrument: "Piano", song: song1, member: member3 })
+partition4 = Partition.create!({ title: "Matteo's partition", instrument: "Drums", song: song2, member: member1 })
+partition5 = Partition.create!({ title: "Robin's partition", instrument: "Guitar", song: song2, member: member2 })
+partition6 = Partition.create!({ title: "Mohammed's partition", instrument: "Piano", song: song2, member: member3 })
+partition7 = Partition.create!({ title: "Matteo's partition", instrument: "Drums", song: song3, member: member4 })
+partition8 = Partition.create!({ title: "Robin's partition", instrument: "Guitar", song: song3, member: member5 })
+partition9 = Partition.create!({ title: "Mohammed's partition", instrument: "Piano", song: song3, member: member6 })
 
 puts "Creating comments..."
 Comment.create!({ content: "Good job", time: Time.now, member: member1, partition: partition2 })
 Comment.create!({ content: "It's ok", time: Time.now, member: member2, partition: partition3 })
 Comment.create!({ content: "Perfect", time: Time.now, member: member3, partition: partition1 })
+Comment.create!({ content: "Good job", time: Time.now, member: member1, partition: partition5 })
+Comment.create!({ content: "It's ok", time: Time.now, member: member2, partition: partition6 })
+Comment.create!({ content: "Perfect", time: Time.now, member: member3, partition: partition4 })
+Comment.create!({ content: "Good job", time: Time.now, member: member1, partition: partition8 })
+Comment.create!({ content: "It's ok", time: Time.now, member: member2, partition: partition9 })
+Comment.create!({ content: "Perfect", time: Time.now, member: member3, partition: partition7 })
 
 puts "Finished..."
