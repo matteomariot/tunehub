@@ -1,2 +1,6 @@
-<h1>Songs#new</h1>
-<p>Find me in app/views/songs/new.html.erb</p>
+<h1>NEW SONG NEW SONG NEW SONG NEW SONG NEW SONG NEW SONG</h1>
+<%= simple_form_for [@band, @song] do |f| %>
+  <%= f.input :name %>
+  <%= f.input :description %>
+  <%= f.submit %>
+<% end %>
