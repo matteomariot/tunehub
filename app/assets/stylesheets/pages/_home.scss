@@ -1,4 +1,4 @@
-// Specific CSS for your home-page
+// banner
 #banner-home {
   background-image: url("https://images.unsplash.com/photo-1564186763535-ebb21ef5277f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2550&q=80");
   background-size: cover;
@@ -59,16 +59,79 @@
   text-decoration: none;
 }
 
+// content discover
 #bg-white {
   background-color: $white;
 }
 
-.container-left {
-  width: 40%;
-  border: 1px solid $black;
+.bg-gray {
+  background-color: $bg-gray;
 }
 
-.container-right {
-  width: 55%;
-  border: 1px solid $black;
+.bg-blue {
+  background-color: $bg-blue;
+}
+
+.text-dark-gray {
+  color: $dark-gray;
+}
+
+.text-white {
+  color: $white;
+}
+
+.container-img {
+  width: 42%;
+  height: 50vh;
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.container-text {
+  width: 57%;
+}
+
+.container-text-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  height: 100%;
+  padding: 0px 60px;
+  h4 {
+    margin-bottom: 25px;
+  }
+}
+
+#btn-signup {
+  background-color: $blue;
+  border-radius: $border-radius;
+  display: inline-block;
+  font-family: $body-font;
+  font-size: 28px;
+  font-weight: 400;
+  color: $white;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 50px;
+  padding-right: 50px;
+  text-decoration: none;
+}
+
+//footer
+#footer-homepage {
+  background: $bg-dark-blue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  color: $light-white;
+  padding-bottom: 0px;
+  margin-top: 30px;
+  p {
+    margin: 0 auto;
+  }
 }

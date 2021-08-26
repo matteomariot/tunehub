@@ -5,43 +5,85 @@
     <h2>Collaborate to stay tuned.</h2>
   </div>
   <div id="cta-discover">
-    <a href="#anchor-discover" id="btn-discover">Discover</a>
+    <a href="#discover" id="btn-discover">Discover</a>
     <i class="fas fa-chevron-down"></i>
   </div>
 </div>
 
 <div id="bg-white">
 
-  <div class="container py-5 text-center" id="anchor-discover">
+  <div class="container py-5 text-center" id="discover">
     <h3>
       Everything you need to collaborate successfully with your bands
     </h3>
-    <div class="d-block">
-      <div class="my-2 d-flex justify-content-between">
-        <div class="container-left">
-          test
+
+    <div class="d-block my-5">
+
+      <div class="d-flex justify-content-between">
+        <div class="container-img">
+          <img src="https://images.unsplash.com/photo-1502773860571-211a597d6e4b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt="tttt">
         </div>
-        <div class="container-right">
-          test
-        </div>
-      </div>
-      <div class="my-2 d-flex justify-content-between">
-        <div class="container-right">
-          test
-        </div>
-        <div class="container-left">
-          test
-        </div>
-      </div>
-      <div class="my-2 d-flex justify-content-between">
-        <div class="container-left">
-          test
-        </div>
-        <div class="container-right">
-          test
+        <div class="container-text bg-gray">
+          <div class="container-text-content text-dark-gray">
+            <h4>
+              Managing your projects
+            </h4>
+            <p>
+              A unique interface to centralize all your band's musical projects
+            </p>
+            <p>
+              Access the scores of all the members of your group and the associated audio recordings
+            </p>
+          </div>
         </div>
       </div>
+
+      <div class="my-3 d-flex justify-content-between">
+        <div class="container-text bg-blue">
+          <div class="container-text-content text-white">
+            <h4>
+              Real-time collaborative editing
+            </h4>
+            <p>
+              Add, edit and comment on your scores and those of your band members
+            </p>
+            <p>
+              Record yourself in audio
+            </p>
+          </div>
+        </div>
+        <div class="container-img">
+          <img src="https://images.unsplash.com/photo-1593698054498-56898cbad8af?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80" alt="sss">
+        </div>
+      </div>
+
+      <div class="d-flex justify-content-between">
+        <div class="container-img">
+          <img src="https://images.unsplash.com/photo-1542728143-d9b537db6433?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="ss">
+        </div>
+        <div class="container-text bg-gray">
+          <div class="container-text-content text-dark-gray">
+            <h4>
+              Complete history
+            </h4>
+            <p>
+              Access the version history of all scores and restore if necessary to the desired date
+            </p>
+          </div>
+        </div>
+      </div>
+
     </div>
+
+    <div>
+      <%= link_to "Kick start my project", new_user_registration_path, id: "btn-signup" %>
+    </div>
+
+
   </div>
+
+    <div id="footer-homepage">
+      <p>TuneHub is made with ❤️ at Le Wagon</p>
+    </div>
 
 </div>

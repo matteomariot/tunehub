@@ -1,17 +1,16 @@
-p {
-    font-family: $body-font;
-    padding-left: 30px;
-    color:$white;
-    font-size: 24px;
-    margin: auto;
-    padding: 10px 30px;
-}
-
 #sidebar {
-    height: 91vh;
-    width: 300px;
-    flex: 0 0 auto;
-    background: $blue;
+  height: 91vh;
+  width: 300px;
+  flex: 0 0 auto;
+  background: $bg-blue;
+  p {
+      font-family: $body-font;
+      padding-left: 30px;
+      color:$white;
+      font-size: 24px;
+      margin: auto;
+      padding: 10px 30px;
+  }
 }
 
 hr.solid {
