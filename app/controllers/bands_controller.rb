@@ -11,13 +11,27 @@ class BandsController < ApplicationController
 
   def new
     @band = Band.new
+    @member = Member.new()
   end
 
   def create
+    # **  BAND CREATION **
     @band = Band.new(band_params)
     @band.user_id = current_user.id
     @band.save
-    redirect_to bands_path(@band)
+
+    if @band.save
+      # ** CREATION MEMBER **
+      @member = Member.new()
+      @member.user_id = current_user.id
+      @member.band_id = @band.id
+      @member.save
+
+      # ** REDIRECT TO DASHBOARD **
+      redirect_to bands_path()
+    else
+      render :new
+    end
   end
 
   def show
@@ -44,4 +58,5 @@ class BandsController < ApplicationController
   def band_params
     params.require(:band).permit(:name)
   end
+
 end
