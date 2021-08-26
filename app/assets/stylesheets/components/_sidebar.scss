@@ -1,7 +1,7 @@
 p {
     font-family: $body-font;
     padding-left: 30px;
-    color: white;
+    color:$white;
     font-size: 24px;
     margin: auto;
     padding: 10px 30px;
@@ -11,17 +11,17 @@ p {
     height: 91vh;
     width: 300px;
     flex: 0 0 auto;
-    background: $blue-ocean;
+    background: $blue;
 }
 
 hr.solid {
-  border: 1px solid rgba(255, 255, 255, 0.575);
+  border: 1px solid $white;
   margin: auto;
 }
 
 a {
   text-decoration: none;
-  color: white;
+  color:$white;
 }
 
 ul {
