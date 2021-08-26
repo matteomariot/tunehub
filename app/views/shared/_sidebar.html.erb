@@ -3,5 +3,14 @@
   <hr class="solid">
   <ul>
 
+    <% user_bands.each do |user_band| %>
+      <li><%= link_to user_band.name, band_path(user_band) %></li>
+      <ul>
+        <% user_band.songs.each do |song| %>
+          <li><%= link_to song.name, band_song_path(user_band, song) %></li>
+        <% end %>
+      </ul>
+    <% end %>
+    
   </ul>
 </nav>

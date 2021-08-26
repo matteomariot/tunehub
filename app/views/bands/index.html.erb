@@ -1,23 +1,23 @@
-<h1>All your bands</h1>
+<div class="container pl-1">
+  <div class="container">
+    <h1>Dashboard</h1>
+  </div>
 
-<div class="container mt-5">
-  <h1>Dashboard</h1>
-</div>
-
-<div class="container mt-5">
-  <div class="cards">
-    <% @user_bands.each do |user_band| %>
-      <%= link_to band_path(user_band.id) do %>
-        <div class="card-band">
-          <img src="http://wallpapersdsc.net/wp-content/uploads/2016/10/U2-Pictures.jpg" />
-          <div class="card-band-infos">
-            <div>
-              <h3><%= user_band.band.name %></h3>
+  <div class="container mt-5">
+    <div class="cards">
+      <% @user_bands.each do |user_band| %>
+        <%= link_to band_path(user_band.id) do %>
+          <div class="card-band">
+            <img src="http://wallpapersdsc.net/wp-content/uploads/2016/10/U2-Pictures.jpg" />
+            <div class="card-band-infos">
+              <div>
+                <h3><%= user_band.name %></h3>
+              </div>
+              <%= 'Membres' %>
             </div>
-            <%= 'Membres' %>
           </div>
-        </div>
+        <% end %>
       <% end %>
-    <% end %>
+    </div>
   </div>
 </div>
