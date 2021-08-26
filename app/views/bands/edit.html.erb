@@ -1,2 +1,5 @@
-<h1>Bands#edit</h1>
-<p>Find me in app/views/bands/edit.html.erb</p>
+<h1>BAND EDIT</h1>
+<%= simple_form_for(@band) do |f| %>
+  <%= f.input :name %>
+  <%= f.submit %>
+<% end %>
