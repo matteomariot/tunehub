@@ -12,7 +12,11 @@
 @import "components/index";
 @import "pages/index";
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: $body-font;
-  background-color: $bg-gray;
+  background-color: $bg-light-gray;
 }
