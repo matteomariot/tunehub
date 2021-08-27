@@ -1,6 +1,26 @@
-<h1>Songs#show</h1>
-<% @partitions.each do |partition| %>
-  <ul>
-  <li><%= partition.title %><%= link_to 'SEE PARTITION', song_partition_path(partition.song_id, partition.id) %></li>
-  </ul>
-<% end %>
+<div>
+  <div class="d-flex justify-content-between bg-white">
+    <div class="m-2 pl-5">
+      <h4>Partitions - <%= @song.name %></h4>
+    </div>
+    <div class="d-flex justify-content-between">
+      <div class="m-2 pr-1">
+        <form method="get" action="/songs/<%= @song.id %>/partitions/new">
+          <div><input value="New partition" type="submit" class="btn btn-primary" /></div>
+        </form>
+      </div>
+      <div class="m-2 pr-3">
+        <form method="get" action="/bands/new">
+          <div><input value="Song settings" type="submit" class="btn btn-primary" /></div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="container mt-5">
+    <ul>
+      <% @partitions.each do |partition| %>
+        <li><%= partition.title %><%= link_to 'SEE PARTITION', song_partition_path(partition.song_id, partition.id) %></li>
+      <% end %>
+    </ul>
+  </div>
+</div>

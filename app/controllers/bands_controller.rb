@@ -4,9 +4,9 @@ class BandsController < ApplicationController
     @bands = Band.all
   end
 
-
   def show
     @songs = Song.where(band_id: Member.where(user_id: current_user))
+    @band = Band.find(params[:id])
   end
 
   def new
@@ -32,10 +32,6 @@ class BandsController < ApplicationController
     else
       render :new
     end
-  end
-
-  def show
-    @songs = Song.where(band_id: Band.find(params[:id]).id)
   end
 
   def edit

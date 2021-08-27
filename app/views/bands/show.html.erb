@@ -1,27 +1,29 @@
 <div>
   <div class="d-flex justify-content-between bg-white">
-    <div class="m-3">
-      <h4>All your songs</h4>
+    <div class="m-2 pl-5">
+      <h4>Songs - <%= @band.name %></h4>
     </div>
     <div class="d-flex justify-content-between">
-      <div class="mt-3 mr-3">
-        <form method="get" action="/bands/new">
+      <div class="m-2 pr-1">
+        <form method="get" action="/bands/<%= @band.id %>/songs/new">
           <div><input value="New song" type="submit" class="btn btn-primary" /></div>
         </form>
       </div>
-      <div class="mt-3 mr-3">
+      <div class="m-2 pr-3">
         <form method="get" action="/bands/new">
-          <div><input value="Settings" type="submit" class="btn btn-primary" /></div>
+          <div><input value="Group settings" type="submit" class="btn btn-primary" /></div>
         </form>
       </div>
     </div>
   </div>
-  <ul>
-    <% @songs.each do |song| %>
-      <li><%= song.name %> <br>
-      <%= song.description %> <br>
-      <%= link_to 'PARTITIONS', band_song_path(song.band_id, song.id) %>
-      </li>
-    <% end %>
-  </ul>
+  <div class="container mt-5">
+    <ul>
+      <% @songs.each do |song| %>
+        <li><%= song.name %> <br>
+        <%= song.description %> <br>
+        <%= link_to 'PARTITIONS', band_song_path(song.band_id, song.id) %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
 </div>
