@@ -76,7 +76,11 @@
     </div>
 
     <div>
-      <%= link_to "Kick start my project", new_user_registration_path, id: "btn-signup" %>
+      <% if user_signed_in? %>
+        <%= link_to "Kick start my project", bands_path, id: "btn-signup" %>
+      <% else %>
+        <%= link_to "Kick start my project", new_user_registration_path, id: "btn-signup" %>
+      <% end %>
     </div>
 
 
