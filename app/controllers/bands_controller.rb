@@ -1,12 +1,12 @@
 class BandsController < ApplicationController
-
   def index
     @bands = Band.all
   end
 
   def show
-    @songs = Song.where(band_id: Member.where(user_id: current_user))
+#     @songs = Song.where(band_id: Member.where(user_id: current_user))
     @band = Band.find(params[:id])
+    @songs = Song.where(band_id: Band.find(params[:id]).id)
   end
 
   def new
@@ -19,7 +19,6 @@ class BandsController < ApplicationController
     @band = Band.new(band_params)
     @band.user_id = current_user.id
     @band.save
-
     if @band.save
       # ** CREATION MEMBER **
       @member = Member.new()
@@ -52,7 +51,6 @@ class BandsController < ApplicationController
   private
 
   def band_params
-    params.require(:band).permit(:name)
+    params.require(:band).permit(:name, :photo)
   end
-
 end

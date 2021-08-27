@@ -3,7 +3,6 @@ class Partition < ApplicationRecord
   belongs_to :member
   has_many :comments, dependent: :destroy
 
-
   validates :title, length: { minimum: 2, too_short: "Partition title should contain atleast 2 characters" }
   validates :title, presence: { message: "Partition title is required" }
   validates :title, uniqueness: { scope: :song, message: "This title is already taken" }

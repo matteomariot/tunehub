@@ -16,11 +16,23 @@
       </div>
     </div>
   </div>
-  <div class="container mt-5">
-    <ul>
-      <% @partitions.each do |partition| %>
-        <li><%= partition.title %><%= link_to 'SEE PARTITION', song_partition_path(partition.song_id, partition.id) %></li>
+  <div class="container-cards-partitions">
+    <% @partitions.each do |partition| %>
+      <%= link_to song_partition_path(partition.song_id, partition.id) do %>
+        <div class="card-partition">
+          <div class="row">
+            <div class="col col-infos">
+              <div class="card-partition-infos">
+                <h2><%= partition.title %></h2>
+                <p>Product description with <strong>relevant info</strong> only.</p>
+              </div>
+            </div>
+            <div class="col col-image">
+            <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+            </div>
+          </div>
+        </div>
       <% end %>
-    </ul>
+    <% end %>
   </div>
 </div>

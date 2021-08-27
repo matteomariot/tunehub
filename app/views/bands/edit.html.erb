@@ -1,5 +1,8 @@
 <h1>BAND EDIT</h1>
 <%= simple_form_for(@band) do |f| %>
   <%= f.input :name %>
+  <%= f.input :photo,
+              as: :file,
+              required: true %>
   <%= f.submit %>
 <% end %>
