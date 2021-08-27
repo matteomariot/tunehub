@@ -16,12 +16,15 @@
       </div>
     </div>
   </div>
-  <ul>
+  <div class="song-card-container">
     <% @songs.each do |song| %>
-      <li><%= song.name %> <br>
-      <%= song.description %> <br>
-      <%= link_to 'PARTITIONS', band_song_path(song.band_id, song.id) %>
-      </li>
+    <div class="card-song">
+      <div class="card-product-infos">
+        <h2><%= song.name %></h2>
+        <p><%= song.description %></p>
+        <%= link_to 'PARTITIONS', band_song_path(song.band_id, song.id), class: "btn btn-primary" %>
+      </div>
+    </div>
     <% end %>
-  </ul>
+  </div>
 </div>
