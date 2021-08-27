@@ -1,15 +1,27 @@
+require "open-uri"
+
 puts "Cleaning database..."
-User.destroy_all
-Member.destroy_all
-Band.destroy_all
-Song.destroy_all
-Partition.destroy_all
 Comment.destroy_all
+Partition.destroy_all
+Song.destroy_all
+Band.destroy_all
+Member.destroy_all
+User.destroy_all
 
 puts "Creating users..."
-user1 = User.create!({ nickname: "Matteo", email: "matteo@gmail.com", password: "azerty" })
-user2 = User.create!({ nickname: "Robin", email: "robin@gmail.com", password: "azerty" })
-user3 = User.create!({ nickname: "Mohammed", email: "mohammed@gmail.com", password: "azerty" })
+user1 = User.new({ nickname: "Matteo", email: "matteo@gmail.com", password: "azerty" })
+user2 = User.new({ nickname: "Robin", email: "robin@gmail.com", password: "azerty" })
+user3 = User.new({ nickname: "Mohammed", email: "mohammed@gmail.com", password: "azerty" })
+
+photo1 = URI.open('https://res.cloudinary.com/ddpetjmr6/image/upload/v1629470225/tljhb6akndmdriqxu9xoro01i4pb.jpg')
+user1.photo.attach(io: photo1, filename: 'photomatteo.jpg', content_type: 'image/jpg')
+user1.save!
+photo2 = URI.open('https://res.cloudinary.com/ddpetjmr6/image/upload/v1629470141/qkd9arh3eyt79t4z7fxwrz0eg4qg.jpg')
+user2.photo.attach(io: photo2, filename: 'photorobin.jpg', content_type: 'image/jpg')
+user2.save!
+photo3 = URI.open('https://res.cloudinary.com/ddpetjmr6/image/upload/v1629470072/j1vr1cidnu0x7680br0ard81m0gs.png')
+user3.photo.attach(io: photo3, filename: 'photomohammed.png', content_type: 'image/png')
+user3.save!
 
 puts "Creating bands..."
 band1 = Band.create!({ name: "U2", user: user1 })
