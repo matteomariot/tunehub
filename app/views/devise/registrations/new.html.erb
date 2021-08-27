@@ -18,7 +18,7 @@
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit, "Sign up" %>
+    <%= f.button :submit, "Sign up", redirect_to bands_path(user: current_user) %>
   </div>
 <% end %>
 
