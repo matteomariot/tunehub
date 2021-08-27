@@ -15,7 +15,7 @@
       <% @user_bands.each do |user_band| %>
         <%= link_to band_path(user_band.id) do %>
           <div class="card-band">
-            <img src='https://tinyurl.com/<%= user_band.name %>-bands' />
+            <%= cl_image_tag user_band.photo.key %>
             <div class="card-band-infos">
               <div>
                 <h3><%= user_band.name %></h3>

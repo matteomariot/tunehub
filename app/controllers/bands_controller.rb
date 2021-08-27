@@ -1,5 +1,4 @@
 class BandsController < ApplicationController
-
   def index
     @bands = Band.all
   end
@@ -50,6 +49,6 @@ class BandsController < ApplicationController
   private
 
   def band_params
-    params.require(:band).permit(:name)
+    params.require(:band).permit(:name, :photo)
   end
 end
