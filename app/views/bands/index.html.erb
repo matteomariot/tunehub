@@ -13,7 +13,7 @@
   <div class="container mt-5">
     <div class="cards">
       <% @user_bands.each do |user_band| %>
-        <%= link_to band_path(user_band.id) do %>
+        <a href="/bands/<%= user_band.id %>">
           <div class="card-band">
             <%= cl_image_tag user_band.photo.key %>
             <div class="card-band-infos">
@@ -23,7 +23,7 @@
               <%= 'Membres' %>
             </div>
           </div>
-        <% end %>
+        </a>
       <% end %>
     </div>
   </div>
