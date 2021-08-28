@@ -1,8 +1,14 @@
-<h1>BAND EDIT</h1>
-<%= simple_form_for(@band) do |f| %>
-  <%= f.input :name %>
-  <%= f.input :photo,
-              as: :file,
-              required: true %>
-  <%= f.submit %>
-<% end %>
+<div class="container">
+  <div class="card-form">
+    <div class="form">
+    <h1>Update your band's information</h1>
+    <%= simple_form_for(@band) do |f| %>
+      <%= f.input :name %>
+      <%= f.input :photo,
+                  as: :file,
+                  required: true %>
+      <%= f.submit class: "btn btn-primary"%>
+    <% end %>
+    </div>
+  </div>
+</div>
