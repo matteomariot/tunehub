@@ -22,11 +22,16 @@ class SongsController < ApplicationController
     @song = Song.find(params[:id])
   end
 
-
   def edit
+    @song = Song.find(params[:id])
+    @band = Band.find(params[:band_id])
   end
 
   def update
+    @band = Band.find(params[:band_id])
+    @song = Song.find(params[:id])
+    @song.update(song_params)
+    redirect_to band_song_path(@band, @song)
   end
 
   def destroy
