@@ -1,6 +1,12 @@
-<h1>NEW SONG NEW SONG NEW SONG NEW SONG NEW SONG NEW SONG</h1>
-<%= simple_form_for [@band, @song] do |f| %>
-  <%= f.input :name %>
-  <%= f.input :description %>
-  <%= f.submit %>
-<% end %>
+<div class="container">
+  <div class="card-form">
+    <div class="form">
+      <h1>NEW SONG</h1>
+      <%= simple_form_for [@band, @song] do |f| %>
+        <%= f.input :name %>
+        <%= f.input :description %>
+        <%= f.submit class: "btn btn-primary" %>
+      <% end %>
+    </div>
+  </div>
+</div>
