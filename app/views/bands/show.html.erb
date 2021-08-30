@@ -18,13 +18,23 @@
   </div>
   <div class="song-card-container">
     <% @songs.each do |song| %>
-      <div class="card-song">
-        <div class="card-product-infos">
-          <h2><%= song.name %></h2>
-          <p><%= song.description %></p>
-          <%= link_to 'PARTITIONS', band_song_path(song.band_id, song.id), class: "btn btn-primary" %>
+      <%= link_to band_song_path(song.band_id, song.id) do %>
+        <div class="card-song">
+          <div class="d-flex flex-nowrap">
+            <div class="align-self-start">
+              <h3><%= song.name %></h3>
+              <p><%= song.description %></p>
+            </div>
+            <div class="align-self-end">
+              <% if @songs.size + 1 == 1 %>
+                <%= @songs.size + 1 %><%= " partition" %>
+              <% else %>
+                <%= @songs.size + 1 %><%= " partitions" %>
+              <% end %>
+            </div>
+          </div>
         </div>
-      </div>
+      <% end %>
     <% end %>
     <%= link_to 'See group members', band_members_path(@band.id),class: "btn btn-primary" %>
   </div>

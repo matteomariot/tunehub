@@ -1,12 +1,27 @@
-<div class="container">
-  <div class="card-form">
-    <div class="form">
-      <h1>NEW SONG</h1>
-      <%= simple_form_for [@band, @song] do |f| %>
-        <%= f.input :name %>
-        <%= f.input :description %>
-        <%= f.submit class: "btn btn-primary" %>
-      <% end %>
+
+<div>
+  <div class="d-flex justify-content-between bg-white">
+    <div class="m-2 pl-5">
+      <h4>Create a new song</h4>
+    </div>
+    <div class="d-flex justify-content-between">
+      <div class="m-2 pr-3">
+        <form method="get" action="/bands/<%= @band.id %>">
+          <div><input value="Back" type="submit" class="btn btn-primary" /></div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="card-form">
+      <div class="form">
+        <h1>New song</h1>
+        <%= simple_form_for [@band, @song] do |f| %>
+          <%= f.input :name %>
+          <%= f.input :description %>
+          <%= f.submit class: "btn btn-primary" %>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>
