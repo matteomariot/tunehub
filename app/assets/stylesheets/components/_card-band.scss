@@ -9,6 +9,7 @@
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   width: 350px;
+  height: 100%;
   margin-right: 20px;
   margin-bottom: 10px;
 }
@@ -56,6 +57,18 @@
   &:hover {
     text-decoration: none !important;
   }
+}
+
+/** NEW BAND CARD **/
+.card-new-band {
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  width: 350px;
+  height: 100% ;
+  margin-right: 20px;
+  margin-bottom: 10px;
+  background-image: url("https://st2.depositphotos.com/2234823/8318/i/450/depositphotos_83184362-stock-photo-plus-sign-button-plus-sign.jpg");
+  background-position: center;
 }
 
 /** RESPONSIVE **/
