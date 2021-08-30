@@ -14,8 +14,6 @@
   margin-bottom: 10px;
 }
 
-
-
 .card-band > img {
   height: 200px;
   width: 100%;
@@ -25,7 +23,6 @@
 .card-band h2 {
   font-size: 24px;
   font-family: $body-font;
-  font-weight: 700;
   color: $dark-gray;
   margin: 0;
 }
@@ -42,7 +39,7 @@
   justify-content: space-between;
   align-items: flex-end;
   position: relative;
-  color: black;
+  color: $dark-gray;
 }
 
 .card-band-infos .card-band-user {
