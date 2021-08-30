@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   devise_for :users
   root to: 'pages#home'
   resources :bands do
@@ -13,6 +14,8 @@ Rails.application.routes.draw do
     resources :comments, only: [ :new, :create ]
   end
 
-  resources :members
+  resources :bands, only: [] do
+    resources :members
+  end
 
 end

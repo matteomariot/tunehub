@@ -1,0 +1,12 @@
+<h1>Salut salut</h1>
+
+<div class="container">
+  <div class="card-form">
+    <div class="form">
+      <%= simple_form_for [@band, @member] do |f| %>
+        <%= f.input :user_id, collection: User.all, input_html: {class: "select2"} %>
+        <%= f.submit class: "btn btn-primary" %>
+      <% end %>
+    </div>
+  </div>
+</div>
