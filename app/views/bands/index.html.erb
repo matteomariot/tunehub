@@ -16,7 +16,7 @@
               <div>
                 <h2 class="link-band"><%= user_band.name %></h2>
               </div>
-              <%= 'Membres' %>
+              <%= @members.where(band_id: user_band.id).count %><%= " Membres" %>
             </div>
           </div>
         </a>

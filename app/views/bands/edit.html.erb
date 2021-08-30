@@ -24,6 +24,11 @@
             </ul>
             <% end %>
       <% end %>
+      <%= link_to "Delete band",
+                band_path(@band),
+                method: :delete,
+                data: { confirm: "Are you sure?"},
+                class: "btn btn-danger" %>
     </div>
   </div>
 </div>

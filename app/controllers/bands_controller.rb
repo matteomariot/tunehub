@@ -1,10 +1,9 @@
 class BandsController < ApplicationController
   def index
-    @bands = Band.all
+    @members = Member.all
   end
 
   def show
-#     @songs = Song.where(band_id: Member.where(user_id: current_user))
     @band = Band.find(params[:id])
     @songs = Song.where(band_id: Band.find(params[:id]).id)
   end

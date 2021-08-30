@@ -10,9 +10,20 @@
     </div>
   </div>
   <div class="container card-form">
+  <ol>
     <% @members.each do |member| %>
+      <li>
       <%= @users.find(member.user_id).nickname %>
+      <% if @band_owner == current_user.id && member.user_id != current_user.id %>
+        <%= link_to "Fire this son of a bitch",
+                  band_member_path(params[:band_id], member.id),
+                  method: :delete,
+                  data: { confirm: "Are you sure?"},
+                  class: "btn btn-danger" %>
+        <% end %>
+      </li>
     <% end %>
+  </ol>
     <% if @band_owner == current_user.id %>
       <%= link_to "Add a member", new_band_member_path(@members.first.band_id), class: "btn btn-success" %>
     <% end %>
