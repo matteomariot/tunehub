@@ -2,6 +2,7 @@ class MembersController < ApplicationController
   def index
     @members = Member.where(band_id: params[:band_id])
     @users = User.all
+    @band_owner = Band.find(params[:band_id]).user_id
   end
 
   def new
