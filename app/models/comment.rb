@@ -1,5 +1,6 @@
 class Comment < ApplicationRecord
   belongs_to :member
+  has_one :user, through: :member
   belongs_to :partition
 
   validates :content,

@@ -12,4 +12,19 @@
     <h1><%= @partition.title %></h1>
     <%= @partition.instrument %>
   </div>
+  <div class="container">
+    <div class="card-form">
+      <div class="form">
+        <ul>
+          <% @comments.each do |comment| %>
+            <li><%= comment.content %><%= comment.user.nickname %></li>
+          <% end %>
+        </ul>
+        <%= simple_form_for([@partition, @comment]) do |f| %>
+          <%= f.input :content %>
+          <%= f.submit class: "btn btn-primary" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
 </div>
