@@ -117,12 +117,12 @@
   padding-right: 50px;
   text-decoration: none;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  &:hover {
+    background-color: $bg-blue-hover;
+    border-color: #002546;
+  }
 }
 
-#btn-signup:hover {
-  background-color: $bg-blue-hover;
-  border-color: #002546;
-}
 
 //footer
 #footer-homepage {

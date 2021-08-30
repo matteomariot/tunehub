@@ -1,6 +1,6 @@
 .side-bar {
-  height: 91vh;
-  width: 300px;
+  height: 90vh;
+  width: 280px;
   flex: 0 0 auto;
   background: $bg-blue;
   p {
@@ -9,23 +9,33 @@
       color:$white;
       font-size: 24px;
       margin: auto;
-      padding: 10px 30px;
+      padding: 8.5px 30px;
   }
   ul {
     list-style: none;
-    padding-bottom: 20px;
+    padding: 20px 14px;
+    i {
+      color: $white;
+    }
+    ul {
+      padding-left: 80px;
+      padding-right: 0px;
+      padding-top: 10px;
+      padding-bottom: 45px;
+    }
   }
 }
 
 hr.solid {
-  border-top: 1px solid $light-white;
-  padding-bottom:  20px;
+  border-top: 1px solid $white;
+  padding-bottom: 20px;
   margin: auto;
 }
 
 .bands {
   text-decoration: none !important;
-  color:$light-white;
+  color:$white;
+  font-size: 18px;
   &:hover {
     text-decoration: none !important;
     color: $white;
@@ -39,5 +49,23 @@ hr.solid {
   &:hover {
     color: $white;
     text-decoration: none !important;
+  }
+}
+
+#footer-sidebar {
+  background: $bg-dark-blue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  padding-bottom: 0px;
+  margin-top: 30px;
+  position: relative;
+  bottom: -43px;
+  p {
+    margin: 0 auto;
+    color: $light-white;
+    font-size: 12px;
+    padding: 0px;
   }
 }

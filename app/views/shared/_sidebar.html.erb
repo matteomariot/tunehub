@@ -1,9 +1,13 @@
 <div class="side-bar">
+
   <p>Bands</p>
   <hr class="solid">
+
   <ul>
     <% user_bands.each do |user_band| %>
       <li>
+        <i class="fas fa-sort-down mr-1"></i>
+        <%= cl_image_tag user_band.photo.key, class: "avatar-bands mr-2" %>
         <%= link_to user_band.name, band_path(user_band), class: "bands" %>
       </li>
       <ul>
@@ -13,4 +17,9 @@
       </ul>
     <% end %>
   </ul>
+
+  <div id="footer-sidebar">
+      <p>TuneHub is made with ❤️ at Le Wagon</p>
+  </div>
+
 </div>

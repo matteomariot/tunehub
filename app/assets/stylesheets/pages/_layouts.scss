@@ -11,3 +11,16 @@
 .bg-white {
   background-color: $white;
 }
+
+.pages-title {
+  color: $pages-title;
+  h4 {
+    margin: 0 auto;
+  }
+}
+
+.p-sticky-top {
+  position: sticky;
+  top: 0px;
+  z-index: 1000;
+}
