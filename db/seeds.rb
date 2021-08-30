@@ -39,6 +39,15 @@ puts "Creating songs..."
 song1 = Song.create!({ name: "The fly", description: "The Fly’s hip-hop drum beat only adds to the song’s insanity, making it impossible not to want to dance to this bonkers track, rocking along to the intimidating guitar.", band: band1 })
 song2 = Song.create!({ name: "We Are The People", description: "In the making for three years, Dutch DJ and producer Garrix believed from the early stages of the creative process that Bono's vocals would be the perfect fit for 'We Are the People'.", band: band1 })
 song3 = Song.create!({ name: "Rock You Like a Hurricane!", description: "Rock You Like a Hurricane! is a song by German rock band Scorpions, considered as their signature song.", band: band2 })
+song4 = Song.create!({ name: "Trop cool une musique", description: "The Fly’s hip-hop drum beat only adds to the song’s insanity, making it impossible not to want to dance to this bonkers track, rocking along to the intimidating guitar.", band: band1 })
+song5 = Song.create!({ name: "Attention une autre", description: "In the making for three years, Dutch DJ and producer Garrix believed from the early stages of the creative process that Bono's vocals would be the perfect fit for 'We Are the People'.", band: band1 })
+song6 = Song.create!({ name: "Une musique qui déchire", description: "Rock You Like a Hurricane! is a song by German rock band Scorpions, considered as their signature song.", band: band2 })
+song7 = Song.create!({ name: "Elle fait pleurer", description: "The Fly’s hip-hop drum beat only adds to the song’s insanity, making it impossible not to want to dance to this bonkers track, rocking along to the intimidating guitar.", band: band1 })
+song8 = Song.create!({ name: "92i Veyron", description: "In the making for three years, Dutch DJ and producer Garrix believed from the early stages of the creative process that Bono's vocals would be the perfect fit for 'We Are the People'.", band: band1 })
+song9 = Song.create!({ name: "Freestyle du sale", description: "Rock You Like a Hurricane! is a song by German rock band Scorpions, considered as their signature song.", band: band2 })
+song10 = Song.create!({ name: "Biatch i have money", description: "The Fly’s hip-hop drum beat only adds to the song’s insanity, making it impossible not to want to dance to this bonkers track, rocking along to the intimidating guitar.", band: band1 })
+song11 = Song.create!({ name: "Big bitch", description: "In the making for three years, Dutch DJ and producer Garrix believed from the early stages of the creative process that Bono's vocals would be the perfect fit for 'We Are the People'.", band: band1 })
+song12 = Song.create!({ name: "On a de l'argent", description: "Rock You Like a Hurricane! is a song by German rock band Scorpions, considered as their signature song.", band: band2 })
 
 puts "Creating partitions..."
 partition1 = Partition.create!({ title: "Matteo's partition", instrument: "Drums", song: song1, member: member1 })
