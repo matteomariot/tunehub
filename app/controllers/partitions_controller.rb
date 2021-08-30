@@ -12,6 +12,7 @@ class PartitionsController < ApplicationController
   end
 
   def edit
+    @partition = Partition.find(params[:id])
   end
 
   def update

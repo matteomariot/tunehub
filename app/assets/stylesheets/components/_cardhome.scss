@@ -9,14 +9,11 @@
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   width: 350px;
-  margin-right: 10px;
+  margin-right: 20px;
   margin-bottom: 10px;
-  text-decoration: none;
 }
 
-.card-band:hover {
-  text-decoration: none;
-}
+
 
 .card-band > img {
   height: 200px;
@@ -26,7 +23,9 @@
 
 .card-band h2 {
   font-size: 24px;
-  font-weight: bold;
+  font-family: $body-font;
+  font-weight: 700;
+  color: $dark-gray;
   margin: 0;
 }
 
@@ -37,7 +36,7 @@
 }
 
 .card-band .card-band-infos {
-  padding: 16px;
+  padding: 20px;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -47,9 +46,16 @@
 
 .card-band-infos .card-band-user {
   position: absolute;
-  right: 16px;
+  right: 20px;
   top: -20px;
   width: 40px;
+}
+
+.card-deck a {
+  text-decoration: none !important;
+  &:hover {
+    text-decoration: none !important;
+  }
 }
 
 /** RESPONSIVE **/

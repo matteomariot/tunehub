@@ -10,15 +10,15 @@
     </div>
   </div>
 
-  <div class="container mt-5">
-    <div class="cards">
+
+    <div class="card-deck m-5">
       <% @user_bands.each do |user_band| %>
         <%= link_to band_path(user_band.id) do %>
           <div class="card-band">
             <%= cl_image_tag user_band.photo.key %>
             <div class="card-band-infos">
               <div>
-                <h3><%= user_band.name %></h3>
+                <h2 class="link-band"><%= user_band.name %></h2>
               </div>
               <%= 'Membres' %>
             </div>
@@ -26,5 +26,5 @@
         <% end %>
       <% end %>
     </div>
-  </div>
+
 </div>
