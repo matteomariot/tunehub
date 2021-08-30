@@ -5,14 +5,10 @@
     </div>
     <div class="d-flex justify-content-between">
       <div class="m-2 pr-1">
-        <form method="get" action="/bands/<%= @band.id %>/songs/new">
-          <div><input value="New song" type="submit" class="btn btn-primary" /></div>
-        </form>
+        <%= link_to "New song", new_band_song_path(@band.id), class: "btn btn-primary" %>
       </div>
       <div class="m-2 pr-3">
-        <form method="get" action="/bands/<%= @band.id %>/edit">
-          <div><input value="Group settings" type="submit" class="btn btn-primary" /></div>
-        </form>
+        <%= link_to "Band Settings", edit_band_path(@band.id), class: "btn btn-primary" %>
       </div>
     </div>
   </div>
