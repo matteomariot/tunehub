@@ -105,6 +105,7 @@
 #btn-signup {
   background-color: $blue;
   border-radius: $border-radius;
+  border: 1px solid transparent;
   display: inline-block;
   font-family: $body-font;
   font-size: 28px;
@@ -115,6 +116,12 @@
   padding-left: 50px;
   padding-right: 50px;
   text-decoration: none;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+#btn-signup:hover {
+  background-color: $bg-blue-hover;
+  border-color: #002546;
 }
 
 //footer
