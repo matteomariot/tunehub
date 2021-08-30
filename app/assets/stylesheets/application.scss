@@ -12,6 +12,9 @@
 @import "components/index";
 @import "pages/index";
 
+// Import JS files
+@import 'select2/dist/css/select2';
+
 html {
   scroll-behavior: smooth;
 }
