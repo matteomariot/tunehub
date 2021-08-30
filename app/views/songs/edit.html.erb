@@ -1,2 +1,12 @@
-<h1>Songs#edit</h1>
-<p>Find me in app/views/songs/edit.html.erb</p>
+<div class="container">
+  <div class="card-form">
+    <div class="form">
+      <h1>Modify - <%= @song.name %></h1>
+      <%= simple_form_for [@band, @song] do |f| %>
+        <%= f.input :name %>
+        <%= f.input :description %>
+        <%= f.submit class: "btn btn-primary" %>
+      <% end %>
+    </div>
+  </div>
+</div>

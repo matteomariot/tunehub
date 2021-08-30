@@ -40,8 +40,6 @@ class BandsController < ApplicationController
   def update
     @band = Band.find(params[:id])
     @band.update(band_params)
-
-    # no need for app/views/restaurants/update.html.erb
     redirect_to band_path(@band)
   end
 

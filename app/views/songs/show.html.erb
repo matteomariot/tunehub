@@ -8,7 +8,7 @@
         <%= link_to "New partition",  new_song_partition_path(@song.id), class: "btn btn-primary" %>
       </div>
       <div class="m-2 pr-3">
-        <form method="get" action="/bands/new">
+        <form method="get" action="/bands/<%= @song.band_id %>/songs/<%= @song.id %>/edit">
           <div><input value="Song settings" type="submit" class="btn btn-primary" /></div>
         </form>
       </div>
