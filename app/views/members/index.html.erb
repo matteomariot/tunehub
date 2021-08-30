@@ -1,8 +1,20 @@
-<h1>Band Members</h1>
-
-<% @members.each do |member| %>
-<%= @users.find(member.user_id).nickname %>
-<% end %>
-<% if @band_owner == current_user.id %>
-  <%= link_to "Add a member", new_band_member_path(@members.first.band_id), class: "btn btn-success" %>
-<% end %>
+<div>
+  <div class="d-flex justify-content-between bg-white p-sticky-top">
+    <div class="my-auto pl-5 pages-title">
+      <h4>Band Members</h4>
+    </div>
+    <div class="d-flex justify-content-between">
+      <div class="m-2 pr-3">
+        <%= link_to "Back", :back, class: "btn btn-primary" %>
+      </div>
+    </div>
+  </div>
+  <div class="container card-form">
+    <% @members.each do |member| %>
+      <%= @users.find(member.user_id).nickname %>
+    <% end %>
+    <% if @band_owner == current_user.id %>
+      <%= link_to "Add a member", new_band_member_path(@members.first.band_id), class: "btn btn-success" %>
+    <% end %>
+  </div>
+</div>
