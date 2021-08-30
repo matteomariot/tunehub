@@ -1,0 +1,18 @@
+.group-member {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  background: white;
+  padding: 8px 16px;
+  border: 1px solid rgb(235,235,235);
+}
+
+.group-member .group-member-info {
+  flex-grow: 1;
+  padding: 0 24px;
+}
+
+.group-member p {
+  margin: 0;
+  line-height: 1.4;
+}

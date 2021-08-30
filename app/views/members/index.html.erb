@@ -12,16 +12,20 @@
   <div class="container card-form">
   <ol>
     <% @members.each do |member| %>
-      <li>
-      <%= @users.find(member.user_id).nickname %>
+      <div class="group-member mb-3">
+        <img src='https://kitt.lewagon.com/placeholder/users/arthur-littm' class="avatar-large" />
+        <div class="group-member-info ml-5">
+          <p><%= @users.find(member.user_id).nickname %></p>
+        </div>
+
       <% if @band_owner == current_user.id && member.user_id != current_user.id %>
-        <%= link_to "Fire this son of a bitch",
+        <%= link_to "Remove access",
                   band_member_path(params[:band_id], member.id),
                   method: :delete,
                   data: { confirm: "Are you sure?"},
-                  class: "btn btn-danger" %>
+                  class: "btn btn-dark rmv-btn" %>
         <% end %>
-      </li>
+      </div>
     <% end %>
   </ol>
     <% if @band_owner == current_user.id %>
