@@ -7,4 +7,8 @@ class User < ApplicationRecord
   has_one_attached :photo
 
   validates :photo, presence: true
+
+  def to_s
+    nickname
+  end
 end

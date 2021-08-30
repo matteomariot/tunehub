@@ -1,0 +1,6 @@
+<h1>Band Members</h1>
+
+<% @members.each do |member| %>
+<%= @users.find(member.user_id).nickname %>
+<% end %>
+<%= link_to "Add a member", new_band_member_path(@members.first.band_id), class: "btn btn-success" %>

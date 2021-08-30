@@ -1,13 +1,19 @@
 <div class="container">
   <div class="card-form">
     <div class="form">
-    <h1>Update your band's information</h1>
+    <h1>Band settings</h1>
     <%= simple_form_for(@band) do |f| %>
       <%= f.input :name %>
       <%= f.input :photo,
                   as: :file,
                   required: true %>
       <%= f.submit class: "btn btn-primary"%>
+      <h2 class='mt-5'>Members</h2>
+          <% @members.each do |member| %>
+          <ul>
+          <%= @users.find(member.user_id).nickname %>
+          </ul>
+          <% end %>
     <% end %>
     </div>
   </div>
