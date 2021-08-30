@@ -31,7 +31,9 @@ document.addEventListener('turbolinks:load', () => {
 
 
 import { initSelect2 } from '../components/init_select2';
+import { initDropDown } from "../components/dropdown-sidebar";
 
 document.addEventListener("turbolinks:load", function () {
   initSelect2();
+  initDropDown();
 });

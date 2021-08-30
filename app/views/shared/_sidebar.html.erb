@@ -5,10 +5,10 @@
 
   <ul>
     <% user_bands.each do |user_band| %>
-      <li>
+      <li class="dropdown-sidebar">
         <i class="fas fa-sort-down mr-1"></i>
         <%= cl_image_tag user_band.photo.key, class: "avatar-bands mr-2" %>
-        <%= link_to user_band.name, band_path(user_band), class: "bands" %>
+        <span class="bands"><%= user_band.name %></span>
       </li>
       <ul>
         <% user_band.songs.each do |song| %>
