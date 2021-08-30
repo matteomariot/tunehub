@@ -1,6 +1,6 @@
 .container-page {
   display: flex;
-  height: 91vh;
+  height: calc(100vh - 68px);
 }
 
 .content-page {
@@ -23,4 +23,8 @@
   position: sticky;
   top: 0px;
   z-index: 1000;
+}
+
+.rotate-arrow {
+  transform: rotate(270deg);
 }
