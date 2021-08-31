@@ -9,17 +9,15 @@
   </div>
     <div class="card-deck m-5">
       <% @user_bands.each do |user_band| %>
-        <a href="/bands/<%= user_band.id %>">
-          <div class="card-band">
+        <div class="card-band">
+          <a href="/bands/<%= user_band.id %>">
             <%= cl_image_tag user_band.photo.key %>
             <div class="card-band-infos">
-              <div>
-                <h2 class="link-band"><%= user_band.name %></h2>
-              </div>
+              <h2 class="link-band"><%= user_band.name %></h2>
               <%= @members.where(band_id: user_band.id).count %><%= " Membres" %>
             </div>
-          </div>
-        </a>
+          </a>
+        </div>
       <% end %>
       <a href="/bands/new/">
       <div class="card-new-band">
