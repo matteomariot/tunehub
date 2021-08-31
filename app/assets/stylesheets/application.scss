@@ -25,3 +25,10 @@ body {
   font-family: $body-font;
   background-color: $bg-light-gray;
 }
+
+a {
+    text-decoration: none !important;
+    &:hover {
+      text-decoration: none !important;
+    }
+  }
