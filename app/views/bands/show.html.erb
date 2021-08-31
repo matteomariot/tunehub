@@ -15,20 +15,20 @@
       </div>
     </div>
   </div>
-  <div class="song-card-container">
+  <div class="m-5">
     <% @songs.each do |song| %>
       <%= link_to band_song_path(song.band_id, song.id) do %>
         <div class="card-song">
-          <div class="d-flex flex-nowrap">
-            <div class="align-self-start">
-              <h3><%= song.name %></h3>
+          <div class="d-flex align-items-end">
+            <div>
+              <h4><%= song.name %></h4>
               <p><%= song.description %></p>
             </div>
             <div class="align-self-end">
-              <% if @songs.size + 1 == 1 %>
-                <%= @songs.size + 1 %><%= " partition" %>
+              <% if Partition.where(song_id: song.id).count == 1 %>
+                <%= Partition.where(song_id: song.id).count %><%= " partition" %>
               <% else %>
-                <%= @songs.size + 1 %><%= " partitions" %>
+                <%= Partition.where(song_id: song.id).count %><%= " partitions" %>
               <% end %>
             </div>
           </div>

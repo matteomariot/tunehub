@@ -45,6 +45,21 @@
   }
 }
 
+// Animation CTA
+.fa-chevron-down {
+  position: relative;
+  animation: 1s slide-top 0.5s infinite reverse;
+}
+@keyframes slide-top {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+// End animation
+
 #btn-discover {
   border: 3px solid $white;
   border-radius: $border-radius;
@@ -122,7 +137,6 @@
     border-color: #002546;
   }
 }
-
 
 //footer
 #footer-homepage {

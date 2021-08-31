@@ -5,29 +5,29 @@
     </div>
     <div class="d-flex justify-content-between">
       <div class="m-2 pr-3">
-        <%= link_to "Back", :back, class: "btn btn-primary" %>
+        <%= link_to "Back", band_path(@band.id), class: "btn btn-primary" %>
       </div>
     </div>
   </div>
-  <div class="container card-form">
-  <ol>
-    <% @members.each do |member| %>
-      <div class="group-member mb-3">
-        <img src='https://kitt.lewagon.com/placeholder/users/arthur-littm' class="avatar-large" />
-        <div class="group-member-info ml-5">
-          <p><%= @users.find(member.user_id).nickname %></p>
-        </div>
+  <div class="card-form m-5">
+    <ol>
+      <% @members.each do |member| %>
+        <div class="group-member mb-3">
+          <img src='https://kitt.lewagon.com/placeholder/users/arthur-littm' class="avatar-large" />
+          <div class="group-member-info ml-5">
+            <p><%= @users.find(member.user_id).nickname %></p>
+          </div>
 
-      <% if @band_owner == current_user.id && member.user_id != current_user.id %>
-        <%= link_to "Remove access",
-                  band_member_path(params[:band_id], member.id),
-                  method: :delete,
-                  data: { confirm: "Are you sure?"},
-                  class: "btn btn-dark rmv-btn" %>
-        <% end %>
-      </div>
-    <% end %>
-  </ol>
+        <% if @band_owner == current_user.id && member.user_id != current_user.id %>
+          <%= link_to "Remove access",
+                    band_member_path(params[:band_id], member.id),
+                    method: :delete,
+                    data: { confirm: "Are you sure?"},
+                    class: "btn btn-dark rmv-btn" %>
+          <% end %>
+        </div>
+      <% end %>
+    </ol>
     <% if @band_owner == current_user.id %>
       <%= link_to "Add a member", new_band_member_path(@members.first.band_id), class: "btn btn-success" %>
     <% end %>

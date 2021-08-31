@@ -37,3 +37,5 @@ document.addEventListener("turbolinks:load", function () {
   initSelect2();
   initDropDown();
 });
+
+console.log("Hello from app/javascript/packs/application.js!");
