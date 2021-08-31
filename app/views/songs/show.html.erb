@@ -12,12 +12,12 @@
       </div>
     </div>
   </div>
-  <div class="song-card-container">
+  <div class="m-5">
     <% @partitions.each do |partition| %>
       <%= link_to song_partition_path(partition.song_id, partition.id) do %>
         <div class="card-song">
-          <div class="d-flex flex-nowrap">
-            <div class="align-self-start">
+          <div class="d-flex align-items-end">
+            <div>
               <h3><%= partition.title %></h3>
               <p><%= partition.instrument %></p>
             </div>
