@@ -20,6 +20,7 @@ class SongsController < ApplicationController
   def show
     @partitions = Partition.where(song_id: Song.find(params[:id]).id)
     @song = Song.find(params[:id])
+    @band = Band.find(params[:band_id])
   end
 
   def edit

@@ -1,7 +1,7 @@
 <div>
   <div class="d-flex justify-content-between bg-white p-sticky-top">
     <div class="my-auto pl-5 pages-title">
-      <h4>Partitions - <%= @song.name %></h4>
+      <h4> <%= @band.name %> > <%= @song.name %> ></h4>
     </div>
     <div class="d-flex justify-content-between">
       <div class="m-2 pr-1">
@@ -12,16 +12,17 @@
       </div>
     </div>
   </div>
-  <div class="song-card-container">
+  <div class="m-5">
     <% @partitions.each do |partition| %>
       <%= link_to song_partition_path(partition.song_id, partition.id) do %>
-        <div class="card-song">
-          <div class="d-flex flex-nowrap">
-            <div class="align-self-start">
-              <h3><%= partition.title %></h3>
+        <div class="card-partition">
+          <div class="d-flex align-items-start justify-content-between">
+            <div class="mt-2 ml-2">
+              <h4><%= partition.title %></h4>
               <p><%= partition.instrument %></p>
             </div>
             <div>
+              <%= cl_image_tag partition.member.user.photo.key, class: "avatar-square-large m-2" %>
             </div>
           </div>
         </div>
