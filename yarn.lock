@@ -2935,6 +2935,11 @@ findup-sync@^3.0.0:
     micromatch "^3.0.4"
     resolve-dir "^1.0.1"
 
+flat-embed@^1.4.0:
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/flat-embed/-/flat-embed-1.4.0.tgz#085fa355500029364ef60c8e76518c462d4826b6"
+  integrity sha512-ET28lPOo+gQkdz4ZnaHQSTno8z3WdmJkrV8CGkdVxEnp4NdByqPsc3IfH96cG1TKybYQIAoeZKRlcqkpH+wN7Q==
+
 flatted@^3.2.2:
   version "3.2.2"
   resolved "https://registry.yarnpkg.com/flatted/-/flatted-3.2.2.tgz#64bfed5cb68fe3ca78b3eb214ad97b63bedce561"
