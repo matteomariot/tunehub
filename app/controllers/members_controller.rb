@@ -3,6 +3,7 @@ class MembersController < ApplicationController
     @members = Member.where(band_id: params[:band_id])
     @users = User.all
     @band_owner = Band.find(params[:band_id]).user_id
+    @band = Band.find(params[:band_id])
   end
 
   def new

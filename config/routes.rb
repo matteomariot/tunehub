@@ -17,4 +17,7 @@ Rails.application.routes.draw do
     resources :members
   end
 
+  resources :comments, only: [] do
+    resources :responses, only: [ :new, :create ]
+  end
 end
