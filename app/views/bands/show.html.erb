@@ -25,10 +25,10 @@
               <p><%= song.description %></p>
             </div>
             <div class="align-self-end">
-              <% if @songs.size + 1 == 1 %>
-                <%= @songs.size + 1 %><%= " partition" %>
+              <% if Partition.where(song_id: song.id).count == 1 %>
+                <%= Partition.where(song_id: song.id).count %><%= " partition" %>
               <% else %>
-                <%= @songs.size + 1 %><%= " partitions" %>
+                <%= Partition.where(song_id: song.id).count %><%= " partitions" %>
               <% end %>
             </div>
           </div>
