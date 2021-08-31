@@ -3,7 +3,8 @@ class ResponsesController < ApplicationController
     @response = Response.new(response_params)
     @response.user = current_user
     @comment = Comment.find(params[:comment_id])
-    @partition = Partition.find(params[:partition_id])
+    @response.comment = @comment
+    @partition = Partition.find(Comment.find(@response.comment_id).partition_id)
     if @response.save
       redirect_to song_partition_path(@partition.song_id, @partition.id)
     else
