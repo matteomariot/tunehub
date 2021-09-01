@@ -1,0 +1,19 @@
+.card-sign {
+  width: 30vw;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.card-sign h2 {
+  text-align: center;
+  padding-bottom: 10px;
+  font-family: $body-font;
+  color: $dark-gray;
+}
+
+.card-sign .form-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

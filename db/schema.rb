@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_09_01_090803) do
+ActiveRecord::Schema.define(version: 2021_09_01_102145) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -79,6 +79,8 @@ ActiveRecord::Schema.define(version: 2021_09_01_090803) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "link"
+    t.string "score"
+    t.string "appid"
     t.index ["member_id"], name: "index_partitions_on_member_id"
     t.index ["song_id"], name: "index_partitions_on_song_id"
   end

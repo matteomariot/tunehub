@@ -71,3 +71,18 @@ hr.solid {
     padding: 0px;
   }
 }
+
+::-webkit-scrollbar {
+  width: 6px;
+  border-radius: 3px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+#side-bar-scroll:hover::-webkit-scrollbar-thumb {
+  background: $light-white;
+  border-radius: 3px;
+}
