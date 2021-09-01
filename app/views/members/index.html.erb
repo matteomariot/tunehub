@@ -13,7 +13,7 @@
     <ol>
       <% @members.each do |member| %>
         <div class="group-member mb-3">
-          <img src='https://kitt.lewagon.com/placeholder/users/arthur-littm' class="avatar-large" />
+          <%= cl_image_tag member.user.photo.key, class: "avatar-large" %>
           <div class="group-member-info ml-5">
             <p><%= @users.find(member.user_id).nickname %></p>
           </div>
