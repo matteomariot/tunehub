@@ -1,6 +1,8 @@
 require "open-uri"
 
 puts "Cleaning database..."
+puts "Matteo a une enorme clavicule"
+Response.destroy_all
 Comment.destroy_all
 Partition.destroy_all
 Song.destroy_all
