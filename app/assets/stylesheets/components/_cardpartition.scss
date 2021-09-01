@@ -13,13 +13,13 @@
   }
 }
 
-::-webkit-scrollbar {
+#comments-scroll::-webkit-scrollbar {
   width: 6px;
   border-radius: 3px;
 }
 
 /* Track */
-::-webkit-scrollbar-track {
+#comments-scroll::-webkit-scrollbar-track {
   background: transparent;
 }
 
