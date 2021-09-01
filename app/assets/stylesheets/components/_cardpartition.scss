@@ -11,3 +11,26 @@
     width: 50vw;
   }
 }
+
+::-webkit-scrollbar {
+  width: 6px;
+  border-radius: 3px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+#comments-scroll::-webkit-scrollbar-thumb {
+  background: $login;
+}
+
+#comments-scroll:hover::-webkit-scrollbar-thumb {
+  background: $bg-blue;
+  border-radius: 3px;
+}
+
+#comments-scroll {
+  height: 42vh;
+}
