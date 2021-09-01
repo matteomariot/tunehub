@@ -16,8 +16,8 @@
     <% @partitions.each do |partition| %>
       <%= link_to song_partition_path(partition.song_id, partition.id) do %>
         <div class="card-partition">
-          <div class="d-flex align-items-start justify-content-between">
-            <div class="my-2 ml-2">
+          <div class="d-flex align-items-center justify-content-between">
+            <div>
               <h4><%= partition.title %></h4>
               <p><%= partition.instrument %></p>
               <%# <% if partition.audio.key %>
@@ -39,7 +39,7 @@
               <%# <% end %>
             </div>
             <div>
-              <%= cl_image_tag partition.member.user.photo.key, class: "avatar-square-large m-2" %>
+              <%= cl_image_tag partition.member.user.photo.key, class: "avatar-square-large border" %>
             </div>
           </div>
         </div>
