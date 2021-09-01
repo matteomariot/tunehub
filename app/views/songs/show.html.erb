@@ -1,5 +1,5 @@
 <div>
-  <div class="d-flex justify-content-between bg-white p-sticky-top">
+  <div class="d-flex justify-content-between bg-white p-sticky-top border-bottom">
     <div class="my-auto pl-5 pages-title">
       <h4> <%= @band.name %> | <%= @song.name %></h4>
     </div>
@@ -16,17 +16,30 @@
     <% @partitions.each do |partition| %>
       <%= link_to song_partition_path(partition.song_id, partition.id) do %>
         <div class="card-partition">
-          <div class="d-flex align-items-start justify-content-between">
-            <div class="mt-2 ml-2">
+          <div class="d-flex align-items-center justify-content-between">
+            <div>
               <h4><%= partition.title %></h4>
               <p><%= partition.instrument %></p>
-              <audio controls="controls">
-                <source src="<%= cloudinary_url(partition.audio.key, resource_type: :video) %>" type="audio/mpeg">
-                Your browser does not support the audio element.
-              </audio>
+              <%# <% if partition.audio.key %>
+                <audio controls="controls">
+                  <source src="<%= cloudinary_url(partition.audio.key, resource_type: :video) %>" type="audio/mpeg">
+                  Your browser does not support the audio element.
+                </audio>
+              <%# <% else %>
+                <%# <div class="d-inline-flex">
+                  <div class="d-inline-flex">
+                    <%= simple_form_for [@song, partition] do |f| %>
+                      <%# <%= f.input :audio, %>
+                                  <%# as: :file, %>
+                                  <%# required: true %>
+                      <%# <%= f.submit class: "btn btn-primary" %>
+                    <%# <% end %>
+                  <%# </div> %>
+                <%# </div> %>
+              <%# <% end %>
             </div>
             <div>
-              <%= cl_image_tag partition.member.user.photo.key, class: "avatar-square-large m-2" %>
+              <%= cl_image_tag partition.member.user.photo.key, class: "avatar-square-large border" %>
             </div>
           </div>
         </div>

@@ -1,5 +1,5 @@
 <div>
-  <div class="d-flex justify-content-between bg-white p-sticky-top">
+  <div class="d-flex justify-content-between bg-white p-sticky-top border-bottom">
     <div class="my-auto pl-5 pages-title">
       <h4><%= @band.name %> | <%= Song.find(params[:song_id]).name %> | <%= @partition.title %></h4>
     </div>
@@ -13,6 +13,9 @@
         <div class="container mt-5">
           <h1><%= @partition.title %></h1>
           <%= @partition.instrument %>
+        </div>
+        <div class="mt-5">
+          <iframe src="https://flat.io/embed/<%= @partition.score %>?appId=612de5048b4cfc0013a41f0a" height="450" width="100%" frameBorder="0" allowfullscreen allow="midi"></iframe>
         </div>
       </div>
       <div class="col-4">
