@@ -50,15 +50,15 @@ song11 = Song.create!({ name: "Big bitch", description: "In the making for three
 song12 = Song.create!({ name: "On a de l'argent", description: "Rock You Like a Hurricane! is a song by German rock band Scorpions, considered as their signature song.", band: band2 })
 
 puts "Creating partitions..."
-partition1 = Partition.create!({ title: "Matteo's partition", instrument: "Drums", song: song1, member: member1 })
-partition2 = Partition.create!({ title: "Robin's partition", instrument: "Guitar", song: song1, member: member2 })
-partition3 = Partition.create!({ title: "Mohammed's partition", instrument: "Piano", song: song1, member: member3 })
-partition4 = Partition.create!({ title: "Matteo's partition", instrument: "Drums", song: song2, member: member1 })
-partition5 = Partition.create!({ title: "Robin's partition", instrument: "Guitar", song: song2, member: member2 })
-partition6 = Partition.create!({ title: "Mohammed's partition", instrument: "Piano", song: song2, member: member3 })
-partition7 = Partition.create!({ title: "Matteo's partition", instrument: "Drums", song: song3, member: member4 })
-partition8 = Partition.create!({ title: "Robin's partition", instrument: "Guitar", song: song3, member: member5 })
-partition9 = Partition.create!({ title: "Mohammed's partition", instrument: "Piano", song: song3, member: member6 })
+partition1 = Partition.create!({ title: "Matteo's partition", instrument: "Drums", song: song1, member: member1, link: "" })
+partition2 = Partition.create!({ title: "Robin's partition", instrument: "Guitar", song: song1, member: member2, link: "" })
+partition3 = Partition.create!({ title: "Mohammed's partition", instrument: "Piano", song: song1, member: member3, link: "" })
+partition4 = Partition.create!({ title: "Matteo's partition", instrument: "Drums", song: song2, member: member1, link: "" })
+partition5 = Partition.create!({ title: "Robin's partition", instrument: "Guitar", song: song2, member: member2, link: "" })
+partition6 = Partition.create!({ title: "Mohammed's partition", instrument: "Piano", song: song2, member: member3, link: "" })
+partition7 = Partition.create!({ title: "Matteo's partition", instrument: "Drums", song: song3, member: member4, link: "" })
+partition8 = Partition.create!({ title: "Robin's partition", instrument: "Guitar", song: song3, member: member5, link: "" })
+partition9 = Partition.create!({ title: "Mohammed's partition", instrument: "Piano", song: song3, member: member6, link: "" })
 
 puts "Creating comments..."
 Comment.create!({ content: "Good job", time: Time.now, member: member1, partition: partition2 })
