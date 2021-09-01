@@ -11,10 +11,21 @@ class PartitionsController < ApplicationController
   end
 
   def new
-
+    @partition = Partition.new
+    @song = Song.find(params[:song_id])
   end
 
   def create
+    @partition = Partition.new(partition_params)
+    @partition.member = Member.where(user_id: current_user).first
+    @song = Song.find(params[:song_id])
+    @partition.song = @song
+    if @partition.save
+      redirect_to song_partition_path(@song, @partition)
+    else
+      render :new
+    end
+    @partition.save
   end
 
   def edit
@@ -25,5 +36,11 @@ class PartitionsController < ApplicationController
   end
 
   def destroy
+  end
+
+  private
+
+  def partition_params
+    params.require(:partition).permit(:title, :instrument, :audio)
   end
 end
