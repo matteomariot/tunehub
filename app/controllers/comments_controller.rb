@@ -6,7 +6,7 @@ class CommentsController < ApplicationController
     @comment.partition = @partition
     @comment.member = Member.where(user: current_user).first
     if @comment.save
-      redirect_to song_partition_path(@partition.song_id, @partition.id)
+      redirect_to song_partition_path(@partition.song_id, @partition.id, anchor: "comment-#{@comment.id}")
     else
       render :create
     end

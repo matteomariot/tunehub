@@ -27,7 +27,7 @@
                 <ul style="list-style-type: none;" class="p-0">
                   <% @comments.each do |comment| %>
                     <li>
-                      <div class="d-flex">
+                      <div class="d-flex" id="comment-<%= comment.id %>">
                         <div class="align-self-center"><%= cl_image_tag comment.user.photo.key, class: "avatar mr-2" %></div>
                         <div class="card-body bg-gray text-dark-gray rounded-pill align-self-center p-2">
                           <div class="d-flex justify-content-between">
@@ -46,7 +46,7 @@
                       <ul style="list-style-type: none;" class="pl-5">
                         <% @responses.where(comment_id: comment.id).each do |response| %>
                             <li>
-                              <div class="d-flex">
+                              <div class="d-flex" id="response-<%= response.id %>">
                                 <div class="align-self-center"><%= cl_image_tag response.user.photo.key, class: "avatar mr-2" %></div>
                                 <div class="card-body bg-gray text-dark-gray rounded-pill align-self-center p-2">
                                   <div class="d-flex justify-content-between">
