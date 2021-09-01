@@ -49,16 +49,80 @@ song10 = Song.create!({ name: "Biatch i have money", description: "The Fly’s h
 song11 = Song.create!({ name: "Big bitch", description: "In the making for three years, Dutch DJ and producer Garrix believed from the early stages of the creative process that Bono's vocals would be the perfect fit for 'We Are the People'.", band: band1 })
 song12 = Song.create!({ name: "On a de l'argent", description: "Rock You Like a Hurricane! is a song by German rock band Scorpions, considered as their signature song.", band: band2 })
 
+
 puts "Creating partitions..."
-partition1 = Partition.create!({ title: "Matteo's partition", instrument: "Drums", song: song1, member: member1, link: "" })
-partition2 = Partition.create!({ title: "Robin's partition", instrument: "Guitar", song: song1, member: member2, link: "" })
-partition3 = Partition.create!({ title: "Mohammed's partition", instrument: "Piano", song: song1, member: member3, link: "" })
-partition4 = Partition.create!({ title: "Matteo's partition", instrument: "Drums", song: song2, member: member1, link: "" })
-partition5 = Partition.create!({ title: "Robin's partition", instrument: "Guitar", song: song2, member: member2, link: "" })
-partition6 = Partition.create!({ title: "Mohammed's partition", instrument: "Piano", song: song2, member: member3, link: "" })
-partition7 = Partition.create!({ title: "Matteo's partition", instrument: "Drums", song: song3, member: member4, link: "" })
-partition8 = Partition.create!({ title: "Robin's partition", instrument: "Guitar", song: song3, member: member5, link: "" })
-partition9 = Partition.create!({ title: "Mohammed's partition", instrument: "Piano", song: song3, member: member6, link: "" })
+partition1 = Partition.create!({ title: "Matteo's partition",
+                                 instrument: "Drums",
+                                 song: song1,
+                                 member: member1,
+                                 link: "",
+                                 score: "612f3f7ae716e30013ef6f20",
+                                 appid: "612de5048b4cfc0013a41f0a" })
+
+partition2 = Partition.create!({ title: "Robin's partition",
+                                 instrument: "Guitar",
+                                 song: song1,
+                                 member: member2,
+                                 link: "",
+                                 score: "612f3f9ba11079001488b668",
+                                 appid: "612de5048b4cfc0013a41f0a" })
+
+partition3 = Partition.create!({ title: "Mohammed's partition",
+                                 instrument: "Piano",
+                                 song: song1,
+                                 member: member3,
+                                 link: "",
+                                 score: "612f3f287baacb0012b498b0",
+                                 appid: "612de5048b4cfc0013a41f0a" })
+
+partition4 = Partition.create!({ title: "Matteo's partition",
+                                 instrument: "Drums",
+                                 song: song2,
+                                 member: member1,
+                                 link: "",
+                                 score: "612f3f0ea11079001488ac86",
+                                 appid: "612de5048b4cfc0013a41f0a" })
+
+partition5 = Partition.create!({ title: "Robin's partition",
+                                 instrument: "Guitar",
+                                 song: song2,
+                                 member: member2,
+                                 link: "",
+                                 score: "612f3ef0c5b6720014cba7b9",
+                                 appid: "612de5048b4cfc0013a41f0a" })
+
+partition6 = Partition.create!({ title: "Mohammed's partition",
+                                 instrument: "Piano",
+                                 song: song2,
+                                 member: member3,
+                                 link: "",
+                                 score: "612f4050e531ed0013f03ce2",
+                                 appid: "612de5048b4cfc0013a41f0a" })
+
+partition7 = Partition.create!({ title: "Matteo's partition",
+                                 instrument: "Drums",
+                                 song: song3,
+                                 member: member4,
+                                 link: "",
+                                 score: "612e09cea2c51d00138f70a5",
+                                 appid: "612de5048b4cfc0013a41f0a" })
+
+partition8 = Partition.create!({ title: "Robin's partition",
+                                 instrument: "Guitar",
+                                 song: song3,
+                                 member: member5,
+                                 link: "",
+                                 score: "612f4195a11079001488d93d",
+                                 appid: "612de5048b4cfc0013a41f0a" })
+
+partition9 = Partition.create!({ title: "Mohammed's partition",
+                                 instrument: "Piano",
+                                 song: song3,
+                                 member: member6,
+                                 link: "",
+                                 score: "612f40657baacb0012b4ad68",
+                                 appid: "612de5048b4cfc0013a41f0a" })
+
 
 puts "Creating comments..."
 Comment.create!({ content: "Good job", time: Time.now, member: member1, partition: partition2 })
