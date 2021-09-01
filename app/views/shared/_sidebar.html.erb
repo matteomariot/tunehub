@@ -2,12 +2,13 @@
 
   <p>Bands</p>
   <hr class="solid">
+
   <div style="height: 500px;" class="container overflow-auto" id="side-bar-scroll">
     <ul>
       <% user_bands.each do |user_band| %>
         <li class="dropdown-sidebar">
           <i class="fas fa-sort-down mr-1"></i>
-          <%= cl_image_tag user_band.photo.key, class: "avatar-bands mr-2" %>
+          <%= cl_image_tag user_band.photo.key, class: "avatar-bands mr-2 border" %>
           <%# <%= link_to user_band.name, band_path(user_band), class: "bands" %>
           <span class="bands"><%= user_band.name %></span>
         </li>
