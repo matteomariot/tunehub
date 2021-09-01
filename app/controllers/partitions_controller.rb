@@ -7,7 +7,7 @@ class PartitionsController < ApplicationController
     @user = User.find(Member.find(@partition.member_id).user_id)
     @comments = Comment.where(partition_id: @partition.id)
     @band = Band.find(Song.find(params[:song_id]).band_id)
-    @responses = Response.where(comment_id: @comments.first.id)
+    @responses = Response.all
   end
 
   def new
