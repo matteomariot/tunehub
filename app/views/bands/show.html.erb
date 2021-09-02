@@ -1,11 +1,11 @@
 <div>
   <div class="d-flex justify-content-between bg-white p-sticky-top border-bottom">
     <div class="my-auto pl-5 pages-title">
-      <h4><%= @band.name %> | Projets</h4>
+      <h4><%= @band.name %> | Projects</h4>
     </div>
     <div class="d-flex justify-content-between">
       <div class="m-2 pr-1">
-        <%= link_to "New song", new_band_song_path(@band.id), class: "btn btn-primary" %>
+        <%= link_to "New project", new_band_song_path(@band.id), class: "btn btn-primary" %>
       </div>
       <div class="m-2 pr-1">
         <%= link_to "Band Settings", edit_band_path(@band.id), class: "btn btn-primary" %>
