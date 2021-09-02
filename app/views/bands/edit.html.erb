@@ -1,4 +1,4 @@
-  <div>
+<div>
   <div class="d-flex justify-content-between bg-white p-sticky-top border-bottom">
     <div class="my-auto pl-5 pages-title">
       <h4>Band settings</h4>
@@ -10,6 +10,7 @@
     </div>
   </div>
   <div class="card-form m-5">
+  <h2 class='mb-5'>Parameters</h2>
     <div class="form">
       <%= simple_form_for(@band) do |f| %>
         <%= f.input :name %>
@@ -17,12 +18,6 @@
                     as: :file,
                     required: true %>
         <%= f.submit class: "btn btn-primary"%>
-        <h2 class='mt-5'>Members</h2>
-            <% @members.each do |member| %>
-            <ul>
-            <%= @users.find(member.user_id).nickname %>
-            </ul>
-            <% end %>
       <% end %>
       <%= link_to "Delete band",
                 band_path(@band),
@@ -30,5 +25,29 @@
                 data: { confirm: "Are you sure?"},
                 class: "btn btn-danger" %>
     </div>
+  </div>
+   <div class="card-form m-5">
+   <h2 class='mb-5'>Members</h2>
+    <ol>
+      <% @members.each do |member| %>
+        <div class="group-member mb-3">
+          <%= cl_image_tag member.user.photo.key, class: "avatar-large" %>
+          <div class="group-member-info ml-5">
+            <p><%= @users.find(member.user_id).nickname %></p>
+          </div>
+
+        <% if @band_owner == current_user.id && member.user_id != current_user.id %>
+          <%= link_to "Remove access",
+                    band_member_path(member.band_id, member.id),
+                    method: :delete,
+                    data: { confirm: "Are you sure?"},
+                    class: "btn btn-dark rmv-btn" %>
+          <% end %>
+        </div>
+      <% end %>
+    </ol>
+    <% if @band_owner == current_user.id %>
+      <%= link_to "Add a member", new_band_member_path(@members.first.band_id), class: "btn btn-success" %>
+    <% end %>
   </div>
 </div>

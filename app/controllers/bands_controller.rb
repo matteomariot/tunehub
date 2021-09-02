@@ -36,6 +36,7 @@ class BandsController < ApplicationController
     @band = Band.find(params[:id])
     @members = Member.where(band_id: @band)
     @users = User.all
+    @band_owner = Band.find(params[:id]).user_id
   end
 
   def update
@@ -47,7 +48,7 @@ class BandsController < ApplicationController
   def destroy
     @band = Band.find(params[:id])
     @band.destroy
-    redirect_to bands_path
+    redirect_to band_edit_path
   end
 
   private
