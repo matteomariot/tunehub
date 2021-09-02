@@ -6,7 +6,11 @@ class CommentsController < ApplicationController
     @comment.partition = @partition
     @comment.member = Member.where(user: current_user).first
     if @comment.save
-      redirect_to song_partition_path(@partition.song_id, @partition.id, anchor: "comment-#{@comment.id}")
+      PartitionChannel.broadcast_to(
+        @partition,
+        render_to_string(partial: "comment", locals: { comment: @comment }, anchor: "comment-#{Comment.last.id}")
+      )
+      redirect_to song_partition_path(@partition.song_id, @partition.id, anchor: "comment-#{Comment.last.id}")
     else
       render :create
     end

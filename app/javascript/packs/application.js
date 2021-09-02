@@ -22,12 +22,8 @@ ActiveStorage.start()
 import "bootstrap";
 
 // Internal imports, e.g:
-// import { initSelect2 } from '../components/init_select2';
+import { initPartitionCable, initScroll } from '../channels/partition_channel';
 
-document.addEventListener('turbolinks:load', () => {
-  // Call your functions here, e.g:
-  // initSelect2();
-});
 
 
 import { initSelect2 } from '../components/init_select2';
@@ -36,6 +32,14 @@ import { initDropDown } from "../components/dropdown-sidebar";
 document.addEventListener("turbolinks:load", function () {
   initSelect2();
   initDropDown();
+  initPartitionCable();
+  initScroll();
+  const commentScroll = document.getElementById('comments-scroll')
+  if (commentScroll) {
+    commentScroll.scrollTo(0, document.getElementById('comments').offsetHeight);
+  }
 });
+
+// document.getElementById('comments-scroll').addEventListener("click", document.getElementById('comments-scroll').scrollTo(0, document.getElementById('comments').offsetHeight));
 
 console.log("Hello from app/javascript/packs/application.js!");

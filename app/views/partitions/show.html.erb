@@ -23,61 +23,15 @@
           <div class="form">
             <h3 class="p-3">Comments (<%= @comments.count %>)</h2>
             <div class="overflow-auto pr-3 pl-3 mt-2 mb-2" id="comments-scroll">
-              <div >
-                <ul style="list-style-type: none;" class="p-0">
+              <div id="comments" data-partition-id="<%= @partition.id %>">
+                <ul style="list-style-type: none;" class="p-0" id="rep">
                   <% @comments.each do |comment| %>
-                    <li>
-                      <div class="d-flex" id="comment-<%= comment.id %>">
-                        <div class="align-self-center"><%= cl_image_tag comment.user.photo.key, class: "avatar mr-2" %></div>
-                        <div class="card-body bg-gray text-dark-gray rounded-pill align-self-center p-2">
-                          <div class="d-flex justify-content-between">
-                            <div class="p-3">
-                              <%= comment.content %>
-                            </div>
-                            <p>
-                              <a class="badge bg-gray" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<%= comment.id %>" aria-expanded="false" aria-controls="collapse<%= comment.id %>"><i class="fas fa-reply text-light"></i></a>
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="d-flex flex-row-reverse mb-3">
-                        <div><%= comment.created_at.in_time_zone("Paris").to_formatted_s(:long) %></div>
-                      </div>
-                      <ul style="list-style-type: none;" class="pl-5">
-                        <% @responses.where(comment_id: comment.id).each do |response| %>
-                            <li>
-                              <div class="d-flex" id="response-<%= response.id %>">
-                                <div class="align-self-center"><%= cl_image_tag response.user.photo.key, class: "avatar mr-2" %></div>
-                                <div class="card-body bg-gray text-dark-gray rounded-pill align-self-center p-2">
-                                  <div class="d-flex justify-content-between">
-                                    <div class="p-3">
-                                      <%= response.content %>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="d-flex flex-row-reverse mb-3">
-                                <div><%= response.created_at.in_time_zone("Paris").to_formatted_s(:long) %></div>
-                              </div>
-                            </li>
-                        <% end %>
-                      </ul>
-                    </li>
-                    <div class="collapse" id="collapse<%= comment.id %>">
-                      <div class="pl-5 mb-3">
-                        <%= simple_form_for([comment, @response]) do |f| %>
-                          <%= f.input :content, placeholder: 'Add a response', label:false  %>
-                          <div class="d-flex justify-content-end">
-                            <%= f.submit class: "btn btn-primary", value: "Reply" %>
-                          </div>
-                        <% end %>
-                      </div>
-                    </div>
+                    <%= render "comments/comment", comment: comment %>
                   <% end %>
                 </ul>
               </div>
             </div>
-            <div class="p-4">
+            <div class="p-4"  id="rep">
               <%= simple_form_for([@partition, @comment]) do |f| %>
                 <%= f.input :content, placeholder: 'Add new comment', label:false %>
                 <div class="d-flex justify-content-end">
