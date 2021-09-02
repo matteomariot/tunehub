@@ -16,7 +16,7 @@
     </div>
   </div>
   <div class="m-5">
-    <% @songs.each do |song| %>
+    <% @search_songs.each do |song| %>
       <%= link_to band_song_path(song.band_id, song.id) do %>
         <div class="card-song">
           <div class="d-flex p-4">
