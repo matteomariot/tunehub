@@ -9,6 +9,75 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
+
+
+      <%# ** IF YOU TOUCH THIS PART YOUR KARMA WILL BE BAD 4EVER, <3 ON U ** %>
+
+
+      <%# ** SEARCH BAR FOR BANDS#INDEX --> FIND A BAND** %>
+      <% if params[:controller] == "bands" && params[:action] == "index" %>
+          <li class="search-bar">
+            <%= form_tag bands_path, method: :get do %>
+            <%= text_field_tag :query,
+              params[:query],
+              class: "form-control",
+              placeholder: "Search..."
+            %>
+          </li>
+          <li class="button-search">
+            <%= submit_tag "Search", class: "btn btn-primary" %>
+          <% end %>
+          </li>
+
+      <%# ** SEARCH BAR FOR BANDS#SHOW --> FIND A MUSIC ** %>
+      <% elsif params[:controller] == "bands" && params[:action] == "show" %>
+          <li class="search-bar">
+            <%= form_tag band_path, method: :get do %>
+            <%= text_field_tag :query,
+              params[:query],
+              class: "form-control",
+              placeholder: "Search..."
+            %>
+          </li>
+          <li class="button-search">
+            <%= submit_tag "Search", class: "btn btn-primary" %>
+          <% end %>
+          </li>
+
+      <%# ** SEARCH BAR FOR SONGS#SHOW --> FIND A PARTITION ** %>
+      <% elsif params[:controller] == "songs" && params[:action] == "show" %>
+          <li class="search-bar">
+            <%= form_tag band_song_path, method: :get do %>
+            <%= text_field_tag :query,
+              params[:query],
+              class: "form-control",
+              placeholder: "Search..."
+            %>
+          </li>
+          <li class="button-search">
+            <%= submit_tag "Search", class: "btn btn-primary" %>
+          <% end %>
+          </li>
+
+      <%# ** DISPLAY OF A FAKE SEARCH BAR FOR ALL OTHER PAGES -- DESIGN FIRST MASTA ** %>
+      <% else %>
+          <li class="search-bar">
+            <%= form_tag({}, {:method => :get}) do %>
+            <%= text_field_tag :query,
+              params[:query],
+              class: "form-control",
+              placeholder: "Search..."
+            %>
+          </li>
+          <li class="button-search">
+            <%= submit_tag "Search", class: "btn btn-primary" %>
+          <% end %>
+          </li>
+      <% end %>
+
+
+
+
         <li class="nav-item active">
           <%= link_to "Dashboard", bands_path, class: "nav-link dashboard" %>
         </li>

@@ -13,7 +13,7 @@
     </div>
   </div>
   <div class="m-5">
-    <% @partitions.each do |partition| %>
+    <% @search_partitions.each do |partition| %>
       <%= link_to song_partition_path(partition.song_id, partition.id) do %>
         <div class="card-partition">
           <div class="d-flex align-items-center justify-content-between">
