@@ -74,7 +74,7 @@ member5 = Member.create!({ user: user5, band: band1 })
 member6 = Member.create!({ user: user1, band: band2 })
 member7 = Member.create!({ user: user2, band: band2 })
 member8 = Member.create!({ user: user3, band: band2 })
-member9 = Member.create!({ user: user6, band: band2 })
+member9 = Member.create!({ user: user4, band: band2 })
 # ** BAND 3 **
 member10 = Member.create!({ user: user1, band: band3 })
 member11 = Member.create!({ user: user2, band: band3 })
@@ -149,7 +149,7 @@ partition6 = Partition.create!({ title: "Mohammed's partition",
                                  score: "612f4050e531ed0013f03ce2",
                                  appid: "612de5048b4cfc0013a41f0a" })
 
-partition7 = Partition.create!({ title: "Kanak's partition",
+partition7 = Partition.create!({ title: "Matteo's partition",
                                  instrument: "Drums",
                                  song: song3,
                                  member: member4,
@@ -157,7 +157,7 @@ partition7 = Partition.create!({ title: "Kanak's partition",
                                  score: "612e09cea2c51d00138f70a5",
                                  appid: "612de5048b4cfc0013a41f0a" })
 
-partition8 = Partition.create!({ title: "Tim's partition",
+partition8 = Partition.create!({ title: "Robin's partition",
                                  instrument: "Guitar",
                                  song: song3,
                                  member: member5,
@@ -165,7 +165,7 @@ partition8 = Partition.create!({ title: "Tim's partition",
                                  score: "612f4195a11079001488d93d",
                                  appid: "612de5048b4cfc0013a41f0a" })
 
-partition9 = Partition.create!({ title: "Sara's partition",
+partition9 = Partition.create!({ title: "Mohammed's partition",
                                  instrument: "Piano",
                                  song: song3,
                                  member: member6,
