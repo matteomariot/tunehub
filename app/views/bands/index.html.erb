@@ -14,7 +14,7 @@
             <%= cl_image_tag user_band.photo.key %>
             <div class="card-band-infos">
               <h2 class="link-band"><%= user_band.name %></h2>
-              <p><%= @members.where(band_id: user_band.id).count %><%= " Membres" %></p>
+              <p><%= @members.where(band_id: user_band.id).count %><%= " members" %></p>
             </div>
           </a>
         </div>
