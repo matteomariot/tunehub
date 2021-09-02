@@ -17,7 +17,7 @@ class PartitionsController < ApplicationController
 
   def create
     @partition = Partition.new(partition_params)
-    @partition.member = Member.where(user_id: current_user).first
+    # @partition.member = Member.where(user_id: current_user).first
     @song = Song.find(params[:song_id])
     @partition.song = @song
     if @partition.save
@@ -41,6 +41,6 @@ class PartitionsController < ApplicationController
   private
 
   def partition_params
-    params.require(:partition).permit(:title, :instrument, :audio)
+    params.require(:partition).permit(:title, :instrument, :member_id, :audio)
   end
 end
