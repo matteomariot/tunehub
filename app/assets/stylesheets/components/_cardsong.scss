@@ -2,7 +2,6 @@
   height: 150px;
   background:$white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  // padding: 30px;
   margin-bottom: 30px;
   font-family: $body-font;
   color: $dark-gray;
@@ -11,7 +10,6 @@
   p {
     opacity: .8;
     margin-bottom: 0;
-    // margin-right: 100px;
   }
   &:hover {
       opacity: 0.8;
