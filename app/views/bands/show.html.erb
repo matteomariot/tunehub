@@ -1,11 +1,11 @@
 <div>
   <div class="d-flex justify-content-between bg-white p-sticky-top border-bottom">
     <div class="my-auto pl-5 pages-title">
-      <h4><%= @band.name %></h4>
+      <h4><%= @band.name %> | Projects</h4>
     </div>
     <div class="d-flex justify-content-between">
       <div class="m-2 pr-1">
-        <%= link_to "New song", new_band_song_path(@band.id), class: "btn btn-primary" %>
+        <%= link_to "New project", new_band_song_path(@band.id), class: "btn btn-primary" %>
       </div>
       <div class="m-2 pr-1">
         <%= link_to "Band Settings", edit_band_path(@band.id), class: "btn btn-primary" %>
@@ -19,14 +19,14 @@
     <% @search_songs.each do |song| %>
       <%= link_to band_song_path(song.band_id, song.id) do %>
         <div class="card-song">
-          <div class="d-flex p-4">
+          <div class="d-flex p-4 w-85">
             <div class="d-flex flex-column align-items-start justify-content-center">
               <h4><%= song.name %></h4>
               <p><%= song.description %></p>
             </div>
           </div>
-          <div class="bg-gray d-flex p-4">
-            <div class="d-flex flex-column align-items-center justify-content-center">
+          <div class="bg-gray d-flex p-4 w-15">
+            <div class="d-flex flex-column align-items-center justify-content-center m-auto">
               <% if Partition.where(song_id: song.id).count == 1 %>
                 <p><strong><%= Partition.where(song_id: song.id).count %></strong></p>
                 <p><strong><%= " partition" %></strong></p>

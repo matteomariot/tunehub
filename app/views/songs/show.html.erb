@@ -1,14 +1,14 @@
 <div>
   <div class="d-flex justify-content-between bg-white p-sticky-top border-bottom">
     <div class="my-auto pl-5 pages-title">
-      <h4> <%= @band.name %> | <%= @song.name %></h4>
+      <h4> <%= @band.name %> | <%= @song.name %> | Partitions</h4>
     </div>
     <div class="d-flex justify-content-between">
       <div class="m-2 pr-1">
         <%= link_to "New partition",  new_song_partition_path(@song.id), class: "btn btn-primary" %>
       </div>
       <div class="m-2 pr-3">
-        <%= link_to "Song settings", edit_band_song_path(@song.band_id, @song.id), class: "btn btn-primary" %>
+        <%= link_to "Project settings", edit_band_song_path(@song.band_id, @song.id), class: "btn btn-primary" %>
       </div>
     </div>
   </div>
