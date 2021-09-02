@@ -1,22 +1,13 @@
 <div class="navbar navbar-expand-sm navbar-light justify-content-between navbar-pages">
-  <%= link_to "TuneHub", root_path, class: "navbar-brand" %>
 
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <% if user_signed_in? %>
-
-
-      <%# ** IF YOU TOUCH THIS PART YOUR KARMA WILL BE BAD 4EVER, <3 ON U ** %>
-
-
-      <%# ** SEARCH BAR FOR BANDS#INDEX --> FIND A BAND** %>
+  <ul class="navbar-nav mr-auto">
+  <li>
+    <%= link_to "TuneHub", root_path, class: "navbar-brand" %>
+  </li>
+  <% if user_signed_in? %>
+<%# ** SEARCH BAR FOR BANDS#INDEX --> FIND A BAND** %>
       <% if params[:controller] == "bands" && params[:action] == "index" %>
-          <li class="search-bar">
+          <li class="search-bar" style="margin-left: 100px">
             <%= form_tag bands_path, method: :get do %>
             <%= text_field_tag :query,
               params[:query],
@@ -24,14 +15,10 @@
               placeholder: "Search..."
             %>
           </li>
-          <li class="button-search">
-            <%= submit_tag "Search", class: "btn btn-primary" %>
           <% end %>
-          </li>
-
       <%# ** SEARCH BAR FOR BANDS#SHOW --> FIND A MUSIC ** %>
       <% elsif params[:controller] == "bands" && params[:action] == "show" %>
-          <li class="search-bar">
+          <li class="search-bar" style="margin-left: 100px">
             <%= form_tag band_path, method: :get do %>
             <%= text_field_tag :query,
               params[:query],
@@ -39,14 +26,10 @@
               placeholder: "Search..."
             %>
           </li>
-          <li class="button-search">
-            <%= submit_tag "Search", class: "btn btn-primary" %>
           <% end %>
-          </li>
-
       <%# ** SEARCH BAR FOR SONGS#SHOW --> FIND A PARTITION ** %>
       <% elsif params[:controller] == "songs" && params[:action] == "show" %>
-          <li class="search-bar">
+          <li class="search-bar" style="margin-left: 100px">
             <%= form_tag band_song_path, method: :get do %>
             <%= text_field_tag :query,
               params[:query],
@@ -54,14 +37,10 @@
               placeholder: "Search..."
             %>
           </li>
-          <li class="button-search">
-            <%= submit_tag "Search", class: "btn btn-primary" %>
           <% end %>
-          </li>
-
       <%# ** DISPLAY OF A FAKE SEARCH BAR FOR ALL OTHER PAGES -- DESIGN FIRST MASTA ** %>
       <% else %>
-          <li class="search-bar">
+          <li class="search-bar" style="margin-left: 100px">
             <%= form_tag({}, {:method => :get}) do %>
             <%= text_field_tag :query,
               params[:query],
@@ -69,12 +48,14 @@
               placeholder: "Search..."
             %>
           </li>
-          <li class="button-search">
-            <%= submit_tag "Search", class: "btn btn-primary" %>
           <% end %>
-          </li>
       <% end %>
+  <% end %>
+  </ul>
 
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <% if user_signed_in? %>
 
 
 
