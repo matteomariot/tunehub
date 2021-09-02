@@ -16,7 +16,7 @@ class MembersController < ApplicationController
     @band = Band.find(params[:band_id])
     @member.band = @band
     if @member.save
-      redirect_to band_members_path
+      redirect_to edit_band_path(params[:band_id])
     else
       render :new
     end
@@ -25,8 +25,7 @@ class MembersController < ApplicationController
   def destroy
     @member = Member.find(params[:id])
     @member.destroy
-
-    redirect_to band_members_path
+    redirect_to edit_band_path(params[:band_id])
   end
 
   private
