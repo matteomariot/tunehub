@@ -20,6 +20,8 @@ class PartitionsController < ApplicationController
     # @partition.member = Member.where(user_id: current_user).first
     @song = Song.find(params[:song_id])
     @partition.song = @song
+    @partition.score = "612f3f9ba11079001488b668"
+    @partition.appid = "612de5048b4cfc0013a41f0a"
     if @partition.save
       redirect_to song_partition_path(@song, @partition)
     else
@@ -33,6 +35,10 @@ class PartitionsController < ApplicationController
   end
 
   def update
+    @song = Song.find(params[:song_id])
+    @partition = Partition.find(params[:id])
+    @partition.update(partition_params)
+    redirect_to song_partition_path(@song, @partition)
   end
 
   def destroy
