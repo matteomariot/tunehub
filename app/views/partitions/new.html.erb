@@ -15,6 +15,7 @@
       <%= simple_form_for [@song, @partition] do |f| %>
         <%= f.input :title %>
         <%= f.input :instrument %>
+        <%= f.input :member_id, collection: Member.where(band_id: @song.band_id), input_html: {class: "select2"} %>
         <%= f.input :audio,
                   as: :file,
                   required: true %>
