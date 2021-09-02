@@ -12,6 +12,10 @@
   audio {
     width: 50vw;
   }
+  &:hover {
+      opacity: 0.8;
+      text-decoration: none !important;
+  }
 }
 
 #comments-scroll::-webkit-scrollbar {
