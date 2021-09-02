@@ -8,7 +8,7 @@
     </div>
   </div>
     <div class="card-deck m-5">
-      <% @user_bands.each do |user_band| %>
+      <% @search_user_bands.each do |user_band| %>
         <div class="card-band">
           <a href="/bands/<%= user_band.id %>">
             <%= cl_image_tag user_band.photo.key %>
