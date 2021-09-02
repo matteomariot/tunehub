@@ -5,11 +5,16 @@
   font-family: $body-font;
   color: $dark-gray;
   padding: 15px;
+  border-radius: $border-radius;
   p {
     opacity: .8;
   }
   audio {
     width: 50vw;
+  }
+  &:hover {
+      opacity: 0.8;
+      text-decoration: none !important;
   }
 }
 
