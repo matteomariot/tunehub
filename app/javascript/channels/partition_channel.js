@@ -17,7 +17,9 @@ const initPartitionCable = () => {
 
 const initScroll = () => {
   const box = document.getElementById('comments-scroll');
-  box.scrollTop = box.offsetHeight;
+  if (box) {
+    box.scrollTop = box.offsetHeight;
+  }
 }
 
 export { initPartitionCable };
