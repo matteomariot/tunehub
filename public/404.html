@@ -3,65 +3,61 @@
 <head>
   <title>The page you were looking for doesn't exist (404)</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Righteous" />
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22256%22 height=%22256%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%23004079%22></rect><path fill=%22%23fff%22 d=%22M35.18 37.40L35.18 71.01L26.80 71.01L26.80 37.40L14.17 37.40L14.17 28.99L47.77 28.99L47.77 37.40L35.18 37.40ZM60.63 54.22L60.63 71.01L52.23 71.01L52.23 28.99L60.63 28.99L60.63 45.81L77.42 45.81L77.42 28.99L85.83 28.99L85.83 71.01L77.42 71.01L77.42 54.22L60.63 54.22Z%22></path></svg>" />
   <style>
-  .rails-default-error-page {
-    background-color: #EFEFEF;
-    color: #2E2F30;
-    text-align: center;
-    font-family: arial, sans-serif;
-    margin: 0;
+  body {
+    margin: 0px;
+  }
+  #container-banner {
+    width: 68%;
+    margin: auto;
+    padding-bottom: 120px;
   }
 
-  .rails-default-error-page div.dialog {
-    width: 95%;
-    max-width: 33em;
-    margin: 4em auto 0;
-  }
+  #banner-home {
+    background-image: url("https://images.unsplash.com/photo-1564186763535-ebb21ef5277f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2550&q=80");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 0px;
+    margin-right: 0px;
 
-  .rails-default-error-page div.dialog > div {
-    border: 1px solid #CCC;
-    border-right-color: #999;
-    border-left-color: #999;
-    border-bottom-color: #BBB;
-    border-top: #B00100 solid 4px;
-    border-top-left-radius: 9px;
-    border-top-right-radius: 9px;
-    background-color: white;
-    padding: 7px 12% 0;
-    box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
   }
-
-  .rails-default-error-page h1 {
-    font-size: 100%;
-    color: #730E15;
-    line-height: 1.5em;
+  #banner-home h1 {
+    color: white;
+    font-family: "Righteous", "cursive";
+    font-size: 3.5rem;
+    padding-bottom: 20px;
+    font-weight: normal;
   }
-
-  .rails-default-error-page div.dialog > p {
-    margin: 0 0 1em;
-    padding: 1em;
-    background-color: #F7F7F7;
-    border: 1px solid #CCC;
-    border-right-color: #999;
-    border-left-color: #999;
-    border-bottom-color: #999;
-    border-bottom-left-radius: 4px;
-    border-bottom-right-radius: 4px;
-    border-top-color: #DADADA;
-    color: #666;
-    box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
+  #banner-home h2 {
+    color: #ffffffcf;
+    font-family: "Righteous", "cursive";
+    font-weight: normal;
+    font-size: 2.5rem;
+    padding-bottom: 30px;
+  }
+  #banner-home a {
+    text-decoration: none;
+  }
+  #banner-home h2:hover {
+    transform: translateX(10px);
   }
   </style>
 </head>
 
-<body class="rails-default-error-page">
-  <!-- This file lives in public/404.html -->
-  <div class="dialog">
-    <div>
-      <h1>The page you were looking for doesn't exist.</h1>
-      <p>You may have mistyped the address or the page may have moved.</p>
+<body>
+  <div id="banner-home">
+    <div id="container-banner">
+      <h1>Sorry, you are out of tune</h1>
+      <a href="/"><h2>Return to your dashbord.</h2></a>
     </div>
-    <p>If you are the application owner check the logs for more information.</p>
+
   </div>
 </body>
 </html>

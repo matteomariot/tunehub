@@ -17,13 +17,17 @@
         <%= f.input :photo,
                     as: :file,
                     required: true %>
-        <%= f.submit class: "btn btn-primary"%>
-      <% end %>
-      <%= link_to "Delete band",
-                band_path(@band),
-                method: :delete,
-                data: { confirm: "Are you sure?"},
-                class: "btn btn-danger" %>
+      <div class="d-flex flex-row">
+        <div class="mr-3"><%= f.submit class: "btn btn-primary"%></div>
+        <% end %>
+        <div>
+          <%= link_to "Delete band",
+                  band_path(@band),
+                  method: :delete,
+                  data: { confirm: "Are you sure?"},
+                  class: "btn btn-dark" %>
+        </div>
+      </div>
     </div>
   </div>
    <div class="card-form m-5">
@@ -47,7 +51,7 @@
       <% end %>
     </ol>
     <% if @band_owner == current_user.id %>
-      <%= link_to "Add a member", new_band_member_path(@members.first.band_id), class: "btn btn-success" %>
+      <%= link_to "Add a member", new_band_member_path(@members.first.band_id), class: "btn btn-primary" %>
     <% end %>
   </div>
 </div>
