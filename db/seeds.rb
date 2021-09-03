@@ -18,7 +18,7 @@ user5 = User.new({ nickname: "Terence", email: "terence@gmail.com", password: "a
 user6 = User.new({ nickname: "Sara", email: "sara@gmail.com", password: "azerty" })
 
 # ** PHOTOS FOR USER **
-photo1 = URI.open('https://res.cloudinary.com/ddpetjmr6/image/upload/v1629470225/tljhb6akndmdriqxu9xoro01i4pb.jpg')
+photo1 = URI.open('https://avatars.githubusercontent.com/u/74420667?v=4')
 user1.photo.attach(io: photo1, filename: 'photomatteo.jpg', content_type: 'image/jpg')
 user1.save!
 photo2 = URI.open('https://res.cloudinary.com/ddpetjmr6/image/upload/v1629470141/qkd9arh3eyt79t4z7fxwrz0eg4qg.jpg')
