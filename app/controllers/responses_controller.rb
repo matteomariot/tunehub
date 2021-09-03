@@ -6,7 +6,7 @@ class ResponsesController < ApplicationController
     @response.comment = @comment
     @partition = Partition.find(Comment.find(@response.comment_id).partition_id)
     if @response.save
-      redirect_to song_partition_path(@partition.song_id, @partition.id, anchor: "response-#{@response.id}")
+      redirect_to song_partition_path(@partition.song_id, @partition.id)
     else
       render :create
     end
