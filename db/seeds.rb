@@ -13,7 +13,7 @@ puts "Creating users..."
 user1 = User.new({ nickname: "Matteo", email: "matteo@gmail.com", password: "azerty" })
 user2 = User.new({ nickname: "Robin", email: "robin@gmail.com", password: "azerty" })
 user3 = User.new({ nickname: "Mohammed", email: "mohammed@gmail.com", password: "azerty" })
-user4 = User.new({ nickname: "Kanak", email: "kanak@gmail.com", password: "azerty" })
+user4 = User.new({ nickname: "Jimi", email: "jimi@gmail.com", password: "azerty" })
 user5 = User.new({ nickname: "Terence", email: "terence@gmail.com", password: "azerty" })
 user6 = User.new({ nickname: "Sara", email: "sara@gmail.com", password: "azerty" })
 
@@ -27,8 +27,8 @@ user2.save!
 photo3 = URI.open('https://res.cloudinary.com/ddpetjmr6/image/upload/v1629470072/j1vr1cidnu0x7680br0ard81m0gs.png')
 user3.photo.attach(io: photo3, filename: 'photomohammed.png', content_type: 'image/png')
 user3.save!
-photo4 = URI.open('http://2.bp.blogspot.com/-a83ZA-ePAr8/T-y7iOQsMhI/AAAAAAAAMHw/tMKQrehSlPs/s1600/Chihuahua-Wallpaper-20123.jpg')
-user4.photo.attach(io: photo4, filename: 'photokanak.jpg', content_type: 'image/jpg')
+photo4 = URI.open('https://i0.gmx.net/image/542/35086542,pd=4/jimi-hendrix.jpg')
+user4.photo.attach(io: photo4, filename: 'photojimi.jpg', content_type: 'image/jpg')
 user4.save!
 photo5 = URI.open('https://pbs.twimg.com/profile_images/949815185656700929/jMmYzrG1.jpg')
 user5.photo.attach(io: photo5, filename: 'phototim.jpg', content_type: 'image/jpg')
@@ -40,9 +40,9 @@ user6.save!
 puts "Creating bands..."
 band1 = Band.create!({ name: "Les portes", user: user1 })
 band2 = Band.create!({ name: "La Police", user: user1 })
-band3 = Band.create!({ name: "The Chairs", user: user3 })
-band4 = Band.create!({ name: "The spoons", user: user1 })
-band5 = Band.create!({ name: "Turtle Vox", user: user2 })
+band3 = Band.create!({ name: "Rose Floyd", user: user3 })
+band4 = Band.create!({ name: "Vous2", user: user1 })
+band5 = Band.create!({ name: "AB/CD", user: user2 })
 
 # ** PHOTOS FOR BAND **
 photo7 = URI.open('https://rockmecoffee.com/wp-content/uploads/2021/08/The-Doors-Elektra-Records-PR-photo.jpg')
@@ -51,13 +51,13 @@ band1.save!
 photo8 = URI.open('https://frasesdelavida.com/wp-content/uploads/2018/05/Frases-de-The-Police.jpg')
 band2.photo.attach(io: photo8, filename: 'photopolice.jpg', content_type: 'image/jpg')
 band2.save!
-photo9 = URI.open('https://comedybarn.com/wp-content/uploads/2019/02/bandquirky.jpg')
+photo9 = URI.open('https://img-new.cgtrader.com/items/2543509/fef7c477db/pink-floyd-group-logo-3d-model-3d-model-obj-blend.jpg')
 band3.photo.attach(io: photo9, filename: 'photochairs.jpg', content_type: 'image/jpg')
 band3.save!
-photo10 = URI.open('https://bonplanaparis.com/inc/img/evts/flyers/14739.jpg')
+photo10 = URI.open('https://static.billboard.com/files/2020/06/U2-2020-CR-Olaf-Heine-billboard-1548-1593187308-compressed.jpg')
 band4.photo.attach(io: photo10, filename: 'photospoon.jpg', content_type: 'image/jpg')
 band4.save!
-photo11 = URI.open('https://www.sainte-luce-loire.com/medias/2019/10/THEWACKIDS.jpg')
+photo11 = URI.open('https://www.journaldugeek.com/wp-content/blogs.dir/1/files/2015/06/acdc_1.jpg')
 band5.photo.attach(io: photo11, filename: 'phototurtlevox.jpg', content_type: 'image/jpg')
 band5.save!
 
