@@ -8,9 +8,9 @@ class CommentsController < ApplicationController
     if @comment.save
       PartitionChannel.broadcast_to(
         @partition,
-        render_to_string(partial: "comment", locals: { comment: @comment }, anchor: "comment-#{Comment.last.id}")
+        render_to_string(partial: "comment", locals: { comment: @comment })
       )
-      redirect_to song_partition_path(@partition.song_id, @partition.id, anchor: "comment-#{Comment.last.id}")
+      redirect_to song_partition_path(@partition.song_id, @partition.id)
     else
       render :create
     end
