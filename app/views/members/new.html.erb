@@ -1,12 +1,20 @@
-<h1>Add a member</h1>
+<div>
+  <div class="d-flex justify-content-between bg-white p-sticky-top border-bottom">
+    <div class="my-auto pl-5 pages-title">
+      <h4>Add a member</h4>
+    </div>
+    <div class="d-flex justify-content-between">
+      <div class="m-2 pr-3">
+        <%= link_to "Back", :back, class: "btn btn-primary" %>
+      </div>
+    </div>
+  </div>
 
-<div class="container">
-  <div class="card-form">
+<div class="card-form m-5">
     <div class="form">
       <%= simple_form_for [@band, @member] do |f| %>
         <%= f.input :user_id, collection: User.all, input_html: {class: "select2"} %>
         <%= f.submit class: "btn btn-primary" %>
       <% end %>
     </div>
-  </div>
 </div>

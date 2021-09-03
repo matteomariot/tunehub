@@ -7,7 +7,7 @@
   <% if user_signed_in? %>
 <%# ** SEARCH BAR FOR BANDS#INDEX --> FIND A BAND** %>
       <% if params[:controller] == "bands" && params[:action] == "index" %>
-          <li class="search-bar" style="margin-left: 100px">
+          <li class="search-bar">
             <%= form_tag bands_path, method: :get do %>
             <%= text_field_tag :query,
               params[:query],
@@ -18,7 +18,7 @@
           <% end %>
       <%# ** SEARCH BAR FOR BANDS#SHOW --> FIND A MUSIC ** %>
       <% elsif params[:controller] == "bands" && params[:action] == "show" %>
-          <li class="search-bar" style="margin-left: 100px">
+          <li class="search-bar">
             <%= form_tag band_path, method: :get do %>
             <%= text_field_tag :query,
               params[:query],
@@ -29,7 +29,7 @@
           <% end %>
       <%# ** SEARCH BAR FOR SONGS#SHOW --> FIND A PARTITION ** %>
       <% elsif params[:controller] == "songs" && params[:action] == "show" %>
-          <li class="search-bar" style="margin-left: 100px">
+          <li class="search-bar">
             <%= form_tag band_song_path, method: :get do %>
             <%= text_field_tag :query,
               params[:query],
@@ -40,7 +40,7 @@
           <% end %>
       <%# ** DISPLAY OF A FAKE SEARCH BAR FOR ALL OTHER PAGES -- DESIGN FIRST MASTA ** %>
       <% else %>
-          <li class="search-bar" style="margin-left: 100px">
+          <li class="search-bar">
             <%= form_tag({}, {:method => :get}) do %>
             <%= text_field_tag :query,
               params[:query],

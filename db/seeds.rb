@@ -14,7 +14,7 @@ user1 = User.new({ nickname: "Matteo", email: "matteo@gmail.com", password: "aze
 user2 = User.new({ nickname: "Robin", email: "robin@gmail.com", password: "azerty" })
 user3 = User.new({ nickname: "Mohammed", email: "mohammed@gmail.com", password: "azerty" })
 user4 = User.new({ nickname: "Kanak", email: "kanak@gmail.com", password: "azerty" })
-user5 = User.new({ nickname: "Tim", email: "tim@gmail.com", password: "azerty" })
+user5 = User.new({ nickname: "Terence", email: "terence@gmail.com", password: "azerty" })
 user6 = User.new({ nickname: "Sara", email: "sara@gmail.com", password: "azerty" })
 
 # ** PHOTOS FOR USER **
@@ -30,7 +30,7 @@ user3.save!
 photo4 = URI.open('http://2.bp.blogspot.com/-a83ZA-ePAr8/T-y7iOQsMhI/AAAAAAAAMHw/tMKQrehSlPs/s1600/Chihuahua-Wallpaper-20123.jpg')
 user4.photo.attach(io: photo4, filename: 'photokanak.jpg', content_type: 'image/jpg')
 user4.save!
-photo5 = URI.open('http://a57.foxnews.com/global.fncstatic.com/static/managed/img/Entertainment/0/0/tim%20mcgraw%20reuters%20660.jpg')
+photo5 = URI.open('https://pbs.twimg.com/profile_images/949815185656700929/jMmYzrG1.jpg')
 user5.photo.attach(io: photo5, filename: 'phototim.jpg', content_type: 'image/jpg')
 user5.save!
 photo6 = URI.open('https://www.femina.ch/assets/content/migration/main/femina_45_sarah_biasini_01.jpg')
@@ -74,7 +74,7 @@ member5 = Member.create!({ user: user5, band: band1 })
 member6 = Member.create!({ user: user1, band: band2 })
 member7 = Member.create!({ user: user2, band: band2 })
 member8 = Member.create!({ user: user3, band: band2 })
-member9 = Member.create!({ user: user6, band: band2 })
+member9 = Member.create!({ user: user5, band: band2 })
 # ** BAND 3 **
 member10 = Member.create!({ user: user1, band: band3 })
 member11 = Member.create!({ user: user2, band: band3 })
@@ -86,18 +86,18 @@ member14 = Member.create!({ user: user1, band: band5 })
 member15 = Member.create!({ user: user2, band: band5 })
 
 puts "Creating songs..."
-song1 = Song.create!({ name: "The fly", description: "The Fly’s hip-hop drum beat only adds to the song’s insanity, making it impossible not to want to dance to this bonkers track, rocking along to the intimidating guitar.", band: band1 })
-song2 = Song.create!({ name: "We Are The People", description: "In the making for three years, Dutch DJ and producer Garrix believed from the early stages of the creative process that Bono's vocals would be the perfect fit for 'We Are the People'.", band: band1 })
-song3 = Song.create!({ name: "Rock You Like a Hurricane!", description: "Rock You Like a Hurricane! is a song by German rock band Scorpions, considered as their signature song.", band: band2 })
-song4 = Song.create!({ name: "Trop cool une musique", description: "The Fly’s hip-hop drum beat only adds to the song’s insanity, making it impossible not to want to dance to this bonkers track, rocking along to the intimidating guitar.", band: band1 })
-song5 = Song.create!({ name: "Attention une autre", description: "In the making for three years, Dutch DJ and producer Garrix believed from the early stages of the creative process that Bono's vocals would be the perfect fit for 'We Are the People'.", band: band1 })
-song6 = Song.create!({ name: "Une musique qui déchire", description: "Rock You Like a Hurricane! is a song by German rock band Scorpions, considered as their signature song.", band: band2 })
-song7 = Song.create!({ name: "Elle fait pleurer", description: "The Fly’s hip-hop drum beat only adds to the song’s insanity, making it impossible not to want to dance to this bonkers track, rocking along to the intimidating guitar.", band: band1 })
-song8 = Song.create!({ name: "92i Veyron", description: "In the making for three years, Dutch DJ and producer Garrix believed from the early stages of the creative process that Bono's vocals would be the perfect fit for 'We Are the People'.", band: band1 })
-song9 = Song.create!({ name: "Freestyle du sale", description: "Rock You Like a Hurricane! is a song by German rock band Scorpions, considered as their signature song.", band: band2 })
-song10 = Song.create!({ name: "Biatch i have money", description: "The Fly’s hip-hop drum beat only adds to the song’s insanity, making it impossible not to want to dance to this bonkers track, rocking along to the intimidating guitar.", band: band1 })
-song11 = Song.create!({ name: "Big bitch", description: "In the making for three years, Dutch DJ and producer Garrix believed from the early stages of the creative process that Bono's vocals would be the perfect fit for 'We Are the People'.", band: band1 })
-song12 = Song.create!({ name: "On a de l'argent", description: "Rock You Like a Hurricane! is a song by German rock band Scorpions, considered as their signature song.", band: band2 })
+song1 = Song.create!({ name: "When The LiveCode’s Over", description: "Hip-hop drum beat only adds to the song’s insanity, making it impossible not to want to dance to this bonkers track, rocking along to the intimidating guitar.", band: band1 })
+song2 = Song.create!({ name: "Not To Touch The 404", description: "In the making for three years, Dutch DJ and producer Garrix believed from the early stages of the creative process that Bono's vocals would be the perfect fit for 'We Are the People'.", band: band1 })
+song3 = Song.create!({ name: "Every Rake You Take", description: "This music will be the opening for our next concert, we have to work on it to make it perfect. The new version is much better than the old one.", band: band2 })
+song4 = Song.create!({ name: "Waiting For The DemoDay", description: "The Fly’s hip-hop drum beat only adds to the song’s insanity, making it impossible not to want to dance to this bonkers track, rocking along to the intimidating guitar.", band: band1 })
+song5 = Song.create!({ name: "Riders On The Form", description: "In the making for three years, Dutch DJ and producer Garrix believed from the early stages of the creative process that Bono's vocals would be the perfect fit for 'We Are the People'.", band: band1 })
+song6 = Song.create!({ name: "Orlane", description: "This girl is so amazing, we need to write a song about her. We can record it in a professional way to have a quality sound and try to play on the radio.", band: band2 })
+song7 = Song.create!({ name: "Walking on the MadzMed", description: "Last music of our next show, we have to work it as much as possible. It would be nice to have the final version in 2 weeks. In the details it would be better to start soft and finish in a masterly way.", band: band2 })
+# song8 = Song.create!({ name: "92i Veyron", description: "In the making for three years, Dutch DJ and producer Garrix believed from the early stages of the creative process that Bono's vocals would be the perfect fit for 'We Are the People'.", band: band1 })
+song9 = Song.create!({ name: "Invisible JS", description: "A little bit more committed and important song for us. The way we’re playing it right now is really good, nothing else to say. Good Job guys.", band: band2 })
+# song10 = Song.create!({ name: "Biatch i have money", description: "The Fly’s hip-hop drum beat only adds to the song’s insanity, making it impossible not to want to dance to this bonkers track, rocking along to the intimidating guitar.", band: band1 })
+# song11 = Song.create!({ name: "Big bitch", description: "In the making for three years, Dutch DJ and producer Garrix believed from the early stages of the creative process that Bono's vocals would be the perfect fit for 'We Are the People'.", band: band1 })
+song12 = Song.create!({ name: "Message in the Slack", description: "The SlackBot messages really pushed me over the edge. Traumatized by the messages at 8pm to make my flashcards, I need to express this in our next music.", band: band2 })
 
 
 puts "Creating partitions..."
@@ -149,28 +149,124 @@ partition6 = Partition.create!({ title: "Mohammed's partition",
                                  score: "612f4050e531ed0013f03ce2",
                                  appid: "612de5048b4cfc0013a41f0a" })
 
-partition7 = Partition.create!({ title: "Kanak's partition",
-                                 instrument: "Drums",
-                                 song: song3,
-                                 member: member4,
+partition7 = Partition.create!({ title: "Matteo's partition",
+                                 instrument: "Drumset",
+                                 song: song12,
+                                 member: member6,
                                  link: "",
-                                 score: "612e09cea2c51d00138f70a5",
+                                 score: "5855bfe6b025383312ee07e7",
                                  appid: "612de5048b4cfc0013a41f0a" })
 
-partition8 = Partition.create!({ title: "Tim's partition",
+partition8 = Partition.create!({ title: "Mohammed's partition",
                                  instrument: "Guitar",
-                                 song: song3,
-                                 member: member5,
+                                 song: song12,
+                                 member: member8,
                                  link: "",
                                  score: "612f4195a11079001488d93d",
                                  appid: "612de5048b4cfc0013a41f0a" })
 
-partition9 = Partition.create!({ title: "Sara's partition",
+partition9 = Partition.create!({ title: "Robin's partition",
+                                 instrument: "Bass Guitar",
+                                 song: song12,
+                                 member: member7,
+                                 link: "",
+                                 score: "612f40657baacb0012b4ad68",
+                                 appid: "612de5048b4cfc0013a41f0a" })
+
+partition10 = Partition.create!({ title: "Mohammed's partition",
                                  instrument: "Piano",
+                                 song: song3,
+                                 member: member3,
+                                 link: "",
+                                 score: "612f4050e531ed0013f03ce2",
+                                 appid: "612de5048b4cfc0013a41f0a" })
+
+partition11 = Partition.create!({ title: "Matteo's partition",
+                                 instrument: "Drumset",
                                  song: song3,
                                  member: member6,
                                  link: "",
+                                 score: "5855bfe6b025383312ee07e7",
+                                 appid: "612de5048b4cfc0013a41f0a" })
+
+partition12 = Partition.create!({ title: "Tim's partition",
+                                 instrument: "Guitar",
+                                 song: song3,
+                                 member: member8,
+                                 link: "",
+                                 score: "612f4195a11079001488d93d",
+                                 appid: "612de5048b4cfc0013a41f0a" })
+
+partition13 = Partition.create!({ title: "Robin's partition",
+                                 instrument: "Bass Guitar",
+                                 song: song3,
+                                 member: member7,
+                                 link: "",
                                  score: "612f40657baacb0012b4ad68",
+                                 appid: "612de5048b4cfc0013a41f0a" })
+
+partition14 = Partition.create!({ title: "Mohammed's partition",
+                                 instrument: "Piano",
+                                 song: song7,
+                                 member: member3,
+                                 link: "",
+                                 score: "612f4050e531ed0013f03ce2",
+                                 appid: "612de5048b4cfc0013a41f0a" })
+
+partition15 = Partition.create!({ title: "Matteo's partition",
+                                 instrument: "Drumset",
+                                 song: song7,
+                                 member: member6,
+                                 link: "",
+                                 score: "5855bfe6b025383312ee07e7",
+                                 appid: "612de5048b4cfc0013a41f0a" })
+
+partition16 = Partition.create!({ title: "Tim's partition",
+                                 instrument: "Guitar",
+                                 song: song7,
+                                 member: member8,
+                                 link: "",
+                                 score: "612f4195a11079001488d93d",
+                                 appid: "612de5048b4cfc0013a41f0a" })
+
+partition17 = Partition.create!({ title: "Robin's partition",
+                                 instrument: "Bass Guitar",
+                                 song: song9,
+                                 member: member7,
+                                 link: "",
+                                 score: "612f40657baacb0012b4ad68",
+                                 appid: "612de5048b4cfc0013a41f0a" })
+
+partition18 = Partition.create!({ title: "Matteo's partition",
+                                 instrument: "Drumset",
+                                 song: song9,
+                                 member: member6,
+                                 link: "",
+                                 score: "5855bfe6b025383312ee07e7",
+                                 appid: "612de5048b4cfc0013a41f0a" })
+
+partition19 = Partition.create!({ title: "Mohammed's partition",
+                                 instrument: "Guitar",
+                                 song: song6,
+                                 member: member8,
+                                 link: "",
+                                 score: "612f4195a11079001488d93d",
+                                 appid: "612de5048b4cfc0013a41f0a" })
+
+partition20 = Partition.create!({ title: "Robin's partition",
+                                 instrument: "Bass Guitar",
+                                 song: song6,
+                                 member: member7,
+                                 link: "",
+                                 score: "612f40657baacb0012b4ad68",
+                                 appid: "612de5048b4cfc0013a41f0a" })
+
+partition21 = Partition.create!({ title: "Matteo's partition",
+                                 instrument: "Drumset",
+                                 song: song6,
+                                 member: member6,
+                                 link: "",
+                                 score: "5855bfe6b025383312ee07e7",
                                  appid: "612de5048b4cfc0013a41f0a" })
 
 
@@ -183,6 +279,6 @@ Comment.create!({ content: "It's ok", time: Time.now, member: member2, partition
 Comment.create!({ content: "Perfect", time: Time.now, member: member3, partition: partition4 })
 Comment.create!({ content: "Good job", time: Time.now, member: member1, partition: partition8 })
 Comment.create!({ content: "It's ok", time: Time.now, member: member2, partition: partition9 })
-Comment.create!({ content: "Perfect", time: Time.now, member: member3, partition: partition7 })
+Comment.create!({ content: "Not quite my tempo...", time: Time.now, member: member5, partition: partition7 })
 
 puts "Finished..."

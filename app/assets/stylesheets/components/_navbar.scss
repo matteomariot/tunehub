@@ -40,8 +40,11 @@
   margin-right: 20px;
 }
 
-.search-bar .form-control {
-  border-radius: 30px;
-  width: 350px;
-  margin-top: 2px;
+.search-bar {
+  margin-left: 100px;
+  .form-control {
+    border-radius: 30px;
+    width: 350px;
+    margin-top: 2px;
+  }
 }
