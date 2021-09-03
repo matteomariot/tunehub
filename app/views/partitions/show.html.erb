@@ -41,7 +41,7 @@
             <div class="overflow-auto pr-3 pl-3 mt-2 mb-2" id="comments-scroll">
               <div id="comments" data-partition-id="<%= @partition.id %>">
                 <ul style="list-style-type: none;" class="p-0" id="rep">
-                  <% @comments.each do |comment| %>
+                  <% @comments.order('created_at ASC').each do |comment| %>
                     <%= render "comments/comment", comment: comment %>
                   <% end %>
                 </ul>
