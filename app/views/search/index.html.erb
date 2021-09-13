@@ -1,0 +1,23 @@
+<h1>Search#index</h1>
+
+<div class="container">
+  <h3>Search in your bands</h3>
+</div>
+
+<div class="card-deck m-5">
+  <% @user_membership.each do |member| %>
+    <div class="card-band">
+      <%= @bands.find(member.band_id).name%>
+    </div>
+  <% end %>
+</div>
+
+<div class="container">
+  <h3>Search in your songs</h3>
+    <% @songs_member.each do |song_member| %>
+      <div class="card-song">
+        <%= @songs.find(song_member).name %>
+      </div>
+    <% end %>
+  </div>
+</div>
